@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+    }
+    
+    header {
+        width: auto;
+        background-color: black;
+    }
+    
+    .p1 {
+        margin-top: 0;
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        color: white;
+    }
+    
+    .p2 {
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 16px;
+        margin-top: 15px;
+    }
+    
+    #d1 {
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+    
+    #d1 div {
+        text-align: center;
+        box-sizing: border-box;
+        width: 180px;
+        height: 40px;
+        border: 3px solid;
+        background-color: pink;
+        line-height: 33px;
+    }
+    
+    #d1 div:hover {
+        background-color: red;
+    }
+    
+    #d1 div:nth-child(3n+1) {
+        margin-bottom: -40px;
+        margin-top: 15px;
+    }
+    
+    #d1 div:nth-child(3n+2) {
+        margin-left: 210px;
+        margin-bottom: -40px;
+    }
+    
+    #d1 div:nth-child(3n+3) {
+        margin-left: 420px;
+    }
+    
+    .p3:not(.p4) {
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: 1px dashed;
+        margin-bottom: -15px;
+    }
+    
+    .p4 {
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .p5 {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 20px;
+        background-color: rgb(238, 138, 238);
+    }
+</style>
+
+<body style="">
+    <header>
+        <p class="p1">hello world 请调整浏览器窗口大小查看效果</p>
+    </header>
+    <p class="p2">页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px</p>
+    <div id="d1">
+        <div>宽180高40(包含边框)</div>
+        <div>产品</div>
+        <div>产品</div>
+        <div>水平间隙30px</div>
+        <div>产品</div>
+        <div>产品</div>
+        <div>垂直间隙15px</div>
+        <div>产品</div>
+        <div>产品</div>
+        <div>边框宽度3px</div>
+        <div>产品</div>
+        <div>产品</div>
+    </div>
+    <p class="p3">link</p>
+    <p class="p3">link</p>
+    <p class="p3">link</p>
+    <p class="p3">link</p>
+    <p class="p3 p4">link</p>
+    <p class="p5">©版权所有<br>本页所有布局均使用块元素</p>
+</body>
+
+</html>
