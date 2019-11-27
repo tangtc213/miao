@@ -71,6 +71,35 @@
         margin-left: 420px;
     }
     
+    #d2 {
+        box-sizing: border-box;
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+    
+    #d2 span {
+        display: inline-block;
+        text-align: center;
+        box-sizing: border-box;
+        width: 180px;
+        height: 40px;
+        border: 3px solid;
+        background-color: pink;
+        line-height: 33px;
+    }
+    
+    #d2 span:nth-child(4n+2) {
+        margin-right: 27px;
+        margin-left: 27px;
+        margin-bottom: 15px;
+    }
+    
+    #d2 span:nth-child(4n+3) {
+        margin-right: -10px;
+    }
+    
     .p3:not(.p4) {
         width: 600px;
         margin-left: auto;
@@ -112,6 +141,24 @@
         <div>边框宽度3px</div>
         <div>产品</div>
         <div>产品</div>
+    </div>
+    <div id="d2">
+        <span>宽180高40(包含边框)</span>
+        <span>产品</span>
+        <span>产品</span>
+        <br>
+        <span>水平间隙30px</span>
+        <span>产品</span>
+        <span>产品</span>
+        <br>
+        <span>垂直间隙15px</span>
+        <span>产品</span>
+        <span>产品</span>
+        <br>
+        <span>边框宽度3px</span>
+        <span>产品</span>
+        <span>产品</span>
+        <br>
     </div>
     <p class="p3">link</p>
     <p class="p3">link</p>
