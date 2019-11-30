@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #parent {
+            box-sizing: border-box;
+            width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0;
+            border-left: 1px solid;
+            border-right: 1px solid;
+        }
+        
+        #parent>div {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            width: 600px;
+            height: 800px;
+            border: 2px solid yellow;
+            font-size: 32px;
+            position: relative;
+            text-align: center;
+        }
+        
+        #center1_a {
+            width: 600px;
+            height: 800px;
+            font-size: 0;
+            line-height: 800px;
+        }
+        
+        span {
+            display: inline-block;
+            box-sizing: border-box;
+            height: 150px;
+            width: 250px;
+            font-size: 14px;
+            border: 1px solid;
+            line-height: 150px;
+        }
+        
+        #center1_b {
+            vertical-align: middle;
+        }
+        
+        #center2_a {
+            display: inline-block;
+            position: absolute;
+            top: 325px;
+            right: 175px;
+            padding: 0;
+            xmargin: auto;
+        }
+        
+        #center3_b {
+            margin: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+        
+        #center4 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #center5 {
+            display: table;
+        }
+        
+        #center5_a {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="center1">
+            <div id="center1_a">
+                <span id="center1_b">1.字号调整使行内元素居中</span>
+            </div>
+        </div>
+        <div id="center2">
+            <span id="center2_a">2.通过绝对定位使元素居中</span>
+        </div>
+        <div id="center3">
+            <span id="center3_b">3.子元素margin设置自动使元素居中</span>
+        </div>
+        <div id="center4">
+            <span id="center4_a">4.伸缩盒模型使元素居中</span>
+        </div>
+        <div id="center5">
+            <div id="center5_a">
+                <span id="center5_b">5.表单元格使元素居中</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

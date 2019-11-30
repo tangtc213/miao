@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        #num1 {
+            box-sizing: border-box;
+            border: 3px solid black;
+            height: 100%;
+            width: 300px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: red;
+        }
+        
+        #num4 {
+            box-sizing: border-box;
+            height: 100%;
+            width: calc(100% - 600px);
+            position: absolute;
+            top: 0;
+            left: 300px;
+            background-color: green;
+        }
+        
+        #num2 {
+            box-sizing: border-box;
+            border: 3px solid black;
+            height: 100%;
+            width: 300px;
+            position: absolute;
+            top: 0;
+            right: 0px;
+            background-color: yellow;
+        }
+        
+        #num3 {
+            box-sizing: border-box;
+            border: 3px solid black;
+            height: 100%;
+            width: 300px;
+            position: absolute;
+            top: 0;
+            right: 300px;
+            background-color: blue;
+        }
+        
+        #num5 {
+            box-sizing: border-box;
+            border: 3px solid black;
+            height: 150px;
+            width: 100%;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            background-color: gray;
+        }
+        
+        #num6 {
+            box-sizing: border-box;
+            border: 3px solid black;
+            height: calc(100% - 150px);
+            width: 100%;
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="num1"></div>
+    <div id="num4">
+        <div id="num5"></div>
+        <div id="num6"></div>
+    </div>
+    <div id="num2"></div>
+    <div id="num3"></div>
+
+
+</body>
+
+</html>
