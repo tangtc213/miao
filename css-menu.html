@@ -24,7 +24,7 @@
         /* background-color: rgba(0, 0, 0, 0.1); */
     }
     
-    li {
+    div {
         box-sizing: border-box;
         display: inline-block;
         font-size: 17px;
@@ -59,27 +59,27 @@
         border: 1px solid;
     }
     
-    .xx div {
+    .xx nav {
         display: none;
         width: 100px;
         height: 100px;
         border: 1px solid;
         position: absolute;
         top: 44px;
-        left: 2px;
+        left: -1px;
     }
     
-    .xx div span {
+    .xx nav ul {
         display: inline-block;
         position: relative;
         vertical-align: top;
         width: 100%;
-        margin-left: 10px;
+        margin-left: -10px;
         font-size: 14px;
         line-height: 20px;
     }
     
-    .xx:hover>div {
+    .xx:hover>nav {
         display: inline-block;
     }
     
@@ -90,45 +90,55 @@
 
 <body>
     <header>
-        <li id="blank">哔哩哔哩</li>
-        <li id="search">
+        <div id="blank">哔哩哔哩</div>
+        <div id="search">
             <input type="text" id="shbox" placeholder="输入搜索内容">
-        </li>
-        <li id="dahuiyuan" class="xx">大会员
-            <div id="inner_a">
-                <span>精彩推荐</span>
-                <span>续费大会员</span>
-                <span>联名卡</span>
-                <span>限时升级</span>
-            </div>
-        </li>
-        <li id="inf" class="xx">消息
-            <div id="inner_b">
-                <span>回复我的</span>
-                <span>@我的</span>
-                <span>收到的赞</span>
-                <span>系统通知</span>
-            </div>
-        </li>
-        <li id="dynamic" class="xx">动态
-            <div id="inner_c">
-                <span>视频动态</span>
-                <span>直播</span>
-                <span>专栏</span>
-            </div>
-        </li>
-        <li id="collect" class="xx">收藏
-            <div id="inner_d">
-                <span>默认收藏夹</span>
-                <span>稍后再看</span>
-            </div>
-        </li>
-        <li id="history" class="xx">历史
-            <div id="inner_f">
-                <span>视频历史</span>
-                <span>专栏历史</span>
-            </div>
-        </li>
+        </div>
+        <div id="dahuiyuan" class="xx">大会员
+            <nav id="inner_a">
+                <ul>
+                    <li>推荐</li>
+                    <li>购物卡</li>
+                    <li>优惠</li>
+                    <li>续费</li>
+                </ul>
+            </nav>
+        </div>
+        <div id="inf" class="xx">消息
+            <nav id="inner_b">
+                <ul>
+                    <li>回复</li>
+                    <li>@我的</li>
+                    <li>收到的赞</li>
+                    <li>我的消息</li>
+                </ul>
+            </nav>
+        </div>
+        <div id="dynamic" class="xx">动态
+            <nav id="inner_c">
+                <ul>
+                    <li>视频动态</li>
+                    <li>直播</li>
+                    <li>专栏</li>
+                </ul>
+            </nav>
+        </div>
+        <div id="collect" class="xx">收藏
+            <nav id="inner_d">
+                <ul>
+                    <li>收藏夹</li>
+                    <li>稍后再看</li>
+                </ul>
+            </nav>
+        </div>
+        <div id="history" class="xx">历史
+            <nav id="inner_f">
+                <ul>
+                    <li>视频历史</li>
+                    <li>专栏历史</li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
 </body>
