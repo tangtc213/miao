@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 设置初始样式 */
+        
+        body {
+            /* margin: 0; */
+            /* padding: 0%; */
+            font-size: 16px;
+            line-height: 24px;
+            text-align: left;
+        }
+        
+        table {
+            border-collapse: collapse;
+            border-color: grey;
+        }
+        
+        thead {
+            /* vertical-align: middle; */
+            border-bottom: 1px solid grey;
+        }
+        
+        tr {
+            border-top: 1px solid grey;
+        }
+        
+        th,
+        td {
+            /* text-align: left; */
+            padding: 12px;
+        }
+        
+        caption {
+            caption-side: bottom;
+            text-align: left;
+        }
+        
+        .col_a {
+            background-color: red;
+        }
+        
+        .col_b {
+            background-color: lime;
+        }
+        
+        .col_c {
+            background-color: yellow;
+        }
+        
+        .col_d {
+            background-color: pink;
+        }
+    </style>
+
+    <style>
+        /* 设置.table样式 */
+        
+        .table {
+            width: 100%;
+            margin-bottom: 16px;
+            color: #212529;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="table">
+        <col class="col_a">
+        <col class="col_b">
+        <col class="col_c">
+        <col class="col_d">
+
+        <thead>
+            <tr>
+                <th scope="col">&num;</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
