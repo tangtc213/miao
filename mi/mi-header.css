@@ -1,0 +1,269 @@
+.header {
+    /* 设置header格式 */
+    width: 100%;
+    margin: 0;
+    height: 140px;
+}
+
+#h-logo {
+    /* 浮动header的logo块 */
+    width: 55px;
+    height: 55px;
+    float: left;
+    background-color: #ff6700;
+    margin-top: 22px;
+    white-space: nowrap;
+    font-size: 0;
+    overflow: hidden;
+}
+
+[id^="h_logo_"] {
+    /* 设置两个header的logo位置 */
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    /* left: -55px; */
+    height: 55px;
+    width: 55px;
+    background-color: #ff6700;
+}
+
+#h_logo_a {
+    /* 设置h_logo初始位置 */
+    margin-left: -55px;
+    background: url(https://s02.mifile.cn/assets/static/image/mi-home.png) no-repeat 50% 50%;
+    transition: .3s;
+}
+
+#h_logo_b {
+    background: url(https://s02.mifile.cn/assets/static/image/mi-logo.png) no-repeat 50% 50%;
+    transition: .3s;
+}
+
+#h-logo:hover #h_logo_a {
+    /* 设置h-logo变换结构 */
+    margin-left: 0px;
+}
+
+#h-logo:active #h_logo_a {
+    transform: scale(0.9, 0.9);
+}
+
+#h-search {
+    /* 设置搜索框的大致位置 */
+    margin-top: 10px;
+    width: 296px;
+    height: 50px;
+    float: right;
+}
+
+#h-search form {
+    width: 296px;
+    height: 50px;
+    margin-top: 0;
+    display: block;
+    position: relative;
+    font-size: 0;
+    line-height: 100px;
+}
+
+#h-search form span:hover {
+    color: #ff6700;
+}
+
+#search {
+    /* 搜索框格式 */
+    display: inline-block;
+    box-sizing: border-box;
+    width: 240px;
+    height: 50px;
+    border: 1px solid #e0e0e0;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-left: 20px;
+    border-right: none;
+    outline: none;
+}
+
+form #submit {
+    /* 查询按钮格式 */
+    position: relative;
+    top: 2px;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 50px;
+    width: 52px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    /* background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_EhSGJQ3nZcMGnWhtS5zjT5TIywWlgsdsZf4p3qMzcGOZKoFq&s) no-repeat 50% 50%; */
+    background-color: #fff;
+}
+
+form:hover #search,
+form:hover #submit {
+    border-color: #333;
+}
+
+form #search+#submit:hover {
+    border-color: #ff6700;
+    background-color: #ff6700;
+    color: #fff;
+}
+
+form {
+    position: relative;
+}
+
+form span {
+    /* 设置表内默认文字 */
+    font-size: 12px;
+    line-height: 12px;
+    color: #333;
+    position: absolute;
+    right: 70px;
+    top: 40px;
+    background-color: #ddd;
+    z-index: 1;
+}
+
+form span#word_b {
+    position: absolute;
+    right: 150px;
+}
+
+#h-search #search:focus-within {
+    border: 1px solid #ff6700;
+    border-right: none;
+    box-shadow: none;
+}
+
+#h-search #search:focus-within+* {
+    border-color: #ff6700;
+}
+
+#search:focus+*+span,
+#search:focus+*+span+span {
+    font-size: 0;
+    background-color: #fff;
+}
+
+#h-nav {
+    /* 设置header中nav的基本结构 */
+    float: left;
+    width: 650px;
+    height: 100px;
+    padding-left: 180px;
+    vertical-align: middle;
+    margin-top: 0;
+}
+
+#h-nav .nav-list {
+    /* 设置h-nav的ul格式 */
+    padding: 0;
+    height: 88px;
+}
+
+#h-nav .list-item {
+    /* 设置h-nav中每个li元素的结构 */
+    display: inline-block;
+    height: 88px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#h-nav .nav-link {
+    /* 设置h-nav中a的样式 */
+    height: 88px;
+    display: block;
+    box-sizing: border-box;
+    text-align: left;
+    padding: 26px 10px 38px;
+    color: #333;
+    line-height: 24px;
+}
+
+.nav-link:hover span {
+    color: #ff6700;
+}
+
+.h-nav-child {
+    /* 设置弹出画布 */
+    position: absolute;
+    box-sizing: content-box;
+    /* padding: 0 calc((100vw - 1226px) / 2);
+    margin: 0 calc((1209px - 100vw) / 2); */
+    top: 140px;
+    left: 0;
+    z-index: 30;
+    width: 100%;
+    height: 0;
+    background: #fff;
+    /* border: 1px solid; */
+    overflow: hidden;
+    transition: .3s;
+}
+
+.list-item:hover .h-nav-child {
+    /* 设置画布弹出后样式 */
+    box-shadow: 0px 3px 4px 0 rgba(0, 0, 0, .2);
+    height: 230px;
+    z-index: 30;
+    transition: none;
+}
+
+.list-item:hover~.list-item .h-nav-child {
+    /* 连续切换的实现方法 */
+    height: 230px;
+    z-index: 25;
+    transition: 0.3s;
+}
+
+.h-child-ul {
+    /* 设置画布内容 */
+    font-size: 0;
+    margin: 0 auto;
+    padding: 0;
+    width: 1226px;
+    height: 200px;
+    /* border: 1px solid; */
+}
+
+.nav-child-list {
+    /* 设置各单元格式 */
+    position: relative;
+    display: inline-block;
+    width: 180px;
+    margin: 0;
+    padding: 20px 10px 0 10px;
+    /* border: 1px solid; */
+    text-align: center;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.h-child-item {
+    /* 设置header商品名称 */
+    margin-top: -40px;
+    display: block;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.h-child-price {
+    /* 设置header商品价格 */
+    display: block;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.h-child-ul .nav-child-list:nth-child(n+2)::before {
+    position: absolute;
+    left: 0;
+    top: 35px;
+    z-index: 1;
+    width: 1px;
+    height: 100px;
+    content: "";
+    background-color: #e0e0e0;
+}

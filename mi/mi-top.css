@@ -1,0 +1,131 @@
+.site-top {
+    /* 设置site-top格式 */
+    font-size: 12px;
+    background-color: #333333;
+    color: #b0b0b0;
+    line-height: 40px;
+}
+
+.site-header {
+    /* 设置site-header格式 */
+    font-size: 12px;
+    background-color: #fff;
+    color: #333;
+    line-height: 100px;
+    /* overflow: hidden; */
+}
+
+div[id^="t-"] {
+    display: inline-block;
+}
+
+#t-login {
+    /* 调整login位置 */
+    float: right;
+}
+
+#t-guide span,
+#t-login span {
+    padding: 0 3.6px 0 3.6px;
+}
+
+#t-guide a:hover,
+#t-login a:hover {
+    color: #fff;
+}
+
+.t-cart {
+    /* 设置购物车基本样式 */
+    position: relative;
+    height: 40px;
+    text-align: center;
+    width: 120px;
+    float: right;
+    margin-left: 15px;
+    background-color: #424242;
+    transition: .3s;
+}
+
+#t-cart {
+    /* 购物车连接样式 */
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+#t-cart_a {
+    /* 设置购物车衍生样式 */
+    max-height: 0px;
+    width: 316px;
+    color: #424242;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+    font-size: 24px;
+    transition: height .3s;
+    text-align: center;
+    overflow: hidden;
+}
+
+#t-cart_a i {
+    margin-right: 10px;
+}
+
+#t-cart_a span {
+    margin: 20px 0 20px;
+    line-height: 38px;
+}
+
+.t-cart:hover {
+    background-color: #fff;
+    color: #ff6700;
+}
+
+.t-cart:hover>#t-cart_a {
+    /* 购物车弹出样式 */
+    max-height: 540px;
+    padding: 30px 10px;
+    z-index: 50;
+    transition: .3s;
+}
+
+#t-cart_a:hover {
+    /* 购物车样式保持 */
+    z-index: 50;
+    transition: .3s;
+}
+
+#t-login {
+    float: right;
+}
+
+#t-guide #appc #appcode {
+    /* 设置下载app弹出样式 */
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    height: 0;
+    width: 100px;
+    transition: height .3s;
+    right: 0;
+    top: 40px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+    z-index: 50;
+}
+
+#t-guide #appc:hover>#appcode {
+    /* 设置下载app图标的效果 */
+    height: 100px;
+    z-index: 50;
+    transition: .3s;
+    /* transition-delay: .5s; */
+}
+
+#appcode:hover {
+    height: 100px;
+    z-index: 50;
+}

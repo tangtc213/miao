@@ -1,0 +1,315 @@
+.solider {
+    /* 设置solider块的格式 */
+    position: relative;
+    width: 100%;
+    margin: 0;
+    height: 670px;
+    z-index: 5;
+    background-color: #fff;
+}
+
+.solider_list {
+    /* 设置轮播图左侧列表大致位置 */
+    position: relative;
+    float: left;
+    width: 234px;
+    height: 460px;
+    background-color: rgba(105, 101, 101, .6);
+    z-index: 25;
+}
+
+.solider_list_ul {
+    /* 设置轮播图列表格式 */
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px 0 0 0;
+}
+
+.solider_list_li {
+    /* 设置轮播图列表每项样式 */
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+    font-size: 14px;
+}
+
+.solider_list_li:hover {
+    /* 设置hover时的颜色变化 */
+    background-color: #ff6700;
+}
+
+.solid-child-link {
+    /* 设置a标签样式 */
+    display: block;
+    margin: 0;
+    width: calc(100% - 30px);
+    height: 100%;
+    padding-left: 30px;
+    z-index: 25;
+}
+
+.solid-child-link:visited {
+    color: white;
+}
+
+.solider_list_li em {
+    /* 设置图标的位置 */
+    float: right;
+    margin-right: 20px;
+}
+
+.solid-child-item {
+    /* 设置solid列表商品详情的位置 */
+    position: absolute;
+    width: 0px;
+    height: 460px;
+    top: 0;
+    left: 234px;
+    background-color: white;
+    box-shadow: 0 0px 16px 0 rgba(0, 0, 0, .2);
+    font-size: 0;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.s-c-i-col {
+    /* 设置每列商品的结构 */
+    width: 248px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0;
+}
+
+.s-c-i-li {
+    /* 设置li格式 */
+    display: block;
+    height: 72px;
+    width: 100%;
+}
+
+.s-c-i-link {
+    /* 设置a格式 */
+    padding-left: 20px;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.s-c-i-link::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.s-c-i-img {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.s-c-i-name {
+    /* solid列表商品名称 */
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.solider_list_li:hover div.solid-child-item {
+    /* 选中solid左侧栏弹出商品列表 */
+    width: calc(1226px - 234px);
+    z-index: 25;
+}
+
+.solider-bg {
+    /* 设置轮播图背景位置 */
+    float: right;
+    position: absolute;
+    left: calc((100% - 1226px) / 2);
+    width: 1226px;
+    height: 460px;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
+.solider-bg .solid-img {
+    /* 设置轮播图图片背景与样式 */
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.solider-bg .solid-b {
+    /* 设置按钮位置 */
+    position: relative;
+    left: 88%;
+    top: 420px;
+    z-index: 10;
+}
+
+.solid-b:checked+*+*+*+*+img {
+    /* 关联按钮和图片 */
+    z-index: 5;
+}
+
+.s-go-left-l {
+    /* 设置左侧按钮 */
+    width: 41px;
+    height: 69px;
+    position: absolute;
+    left: 234px;
+    top: 50%;
+    background: url(https://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png) no-repeat -84px 50%;
+    z-index: 20;
+}
+
+.s-go-right-l {
+    /* 设置右侧按钮 */
+    width: 41px;
+    height: 69px;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    background: url(https://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png) no-repeat -125px 50%;
+    z-index: 20;
+}
+
+.s-go-left-l:hover {
+    /* 左标签的鼠标指示样式 */
+    background-position: 0 50%;
+}
+
+.s-go-right-l:hover {
+    /* 右标签的鼠标指示样式 */
+    background-position: -41px 50%;
+}
+
+.solid-b:checked+*+*+*+*+*+*+*+*+*+label {
+    /* 轮播图左移效果实现 */
+    z-index: 22;
+}
+
+.solid-b:checked+*+*+*+*+*+*+*+*+*+*+*+*+*+*+label {
+    /* 轮播图右移效果实现 */
+    z-index: 22;
+}
+
+.solider-span {
+    /* solid-span的定位 */
+    float: left;
+    margin-top: 14px;
+    top: 480px;
+    left: 0;
+    width: 100%;
+    height: 170px;
+    /* background-color: rgba(0, 0, 0, .1); */
+}
+
+.solider-span .solid-span-a {
+    /* span-a 的样式 */
+    width: 234px;
+    height: 170px;
+    float: left;
+    margin: 0;
+    background-color: #5f5750;
+}
+
+.span-a {
+    /* span-li样式 */
+    font-size: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.span-a-li {
+    /* span-li格式 */
+    display: inline-block;
+    width: calc((100%) / 3);
+    height: calc((100%) / 2);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.span-a-link {
+    /* span-list-a的格式 */
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+    font-size: 12px;
+    line-height: 12px;
+    padding-top: 20px;
+    opacity: 0.7;
+}
+
+.span-a-img {
+    /* span-a的图片设置 */
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 0px auto 4px;
+    /* background-color: #fff; */
+    border: 0;
+}
+
+.span-a-link:hover {
+    opacity: 1;
+}
+
+.solid-span-b {
+    /* 设置solid-span-b的位置 */
+    font-size: 0;
+    float: left;
+    width: 978px;
+    height: 170px;
+    margin: 0;
+    margin-left: 14px;
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    padding: 0;
+}
+
+.span-b {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.span-b-li {
+    /* 设置各部分框的位置 */
+    display: inline-block;
+    width: 316px;
+    height: 100%;
+    margin: 0;
+    margin-left: 15px;
+    padding: 0;
+    /* background-color: lime; */
+}
+
+.span-b-li:first-child {
+    /* 取消第一个框的左外边距 */
+    margin-left: 0;
+}
+
+.span-b-link {
+    /* 设置span-b的连接样式 */
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* background-color: yellow; */
+}
+
+.span-b-img {
+    /* 设置图片样式 */
+    width: 100%;
+    height: 100%;
+    border: none;
+}

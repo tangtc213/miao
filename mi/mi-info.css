@@ -1,0 +1,62 @@
+.info {
+    /* info的结构 */
+    position: relative;
+    width: 100%;
+    padding: 30px 0;
+    background-color: #FAFAFA;
+}
+
+.info .mi-logo {
+    float: left;
+    width: 57px;
+    height: 57px;
+    margin-right: 10px;
+    background: url(https://s02.mifile.cn/assets/static/image/logo-footer.png) no-repeat 50% 50%;
+    top: 0;
+    left: 0;
+}
+
+.info .info-text {
+    width: 100%;
+    font-size: 12px;
+    padding-left: 67px;
+}
+
+p.info-text-a * {
+    color: #757575;
+}
+
+p.info-text-a a:hover {
+    color: #ff6700;
+}
+
+p.info-text-b span {
+    display: block;
+}
+
+.info-link {
+    width: 100%;
+}
+
+.info-link a {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.solgan {
+    font-size: 12px;
+    font-weight: 400;
+    clear: both;
+    color: #333;
+    width: 100%;
+    margin: 30px auto 0;
+    text-align: center;
+    background: url(https://s02.mifile.cn/assets/static/image/slogan2016.png) no-repeat center 0;
+}
+
+.solgan::after {
+    content: "";
+    height: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}

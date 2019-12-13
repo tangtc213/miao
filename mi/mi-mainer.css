@@ -1,0 +1,767 @@
+    .mainer {
+        position: relative;
+        /* 设置mainer块的格式 */
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background-color: rgba(0, 0, 0, .1);
+    }
+    
+    .flash-sale {
+        /* 闪购界面格式 */
+        position: relative;
+        width: 100%;
+        height: 398px;
+        margin-bottom: 22px;
+    }
+    
+    .home-banner-box {
+        /* 过场广告格式 */
+        position: relative;
+        width: 100%;
+        height: 120px;
+        margin: 22px 0;
+        overflow: hidden;
+    }
+    
+    .home-container {
+        /* 主体内容框格式 */
+        position: relative;
+        width: 100%;
+        height: 686px;
+        margin-bottom: 8px;
+    }
+    
+    .home-video-box {
+        /* 视频 */
+        position: relative;
+        width: 100%;
+        height: 357px;
+    }
+    
+    .flash-sale .flash-h {
+        /* 闪购标题框 */
+        width: 100%;
+        height: 58px;
+    }
+    
+    .flash-sale .flash-row {
+        /*  */
+        width: 100%;
+        height: 340px;
+        position: relative;
+    }
+    
+    .flash-countdown {
+        /* 设置倒计时位置 */
+        display: inline-block;
+        box-sizing: border-box;
+        height: 100%;
+        width: 234px;
+        padding-top: 39px;
+        border-top: 1px solid #e53935;
+        background-color: #f1eded;
+        text-align: center;
+        vertical-align: top;
+    }
+    
+    .round {
+        /* 设置场次块 */
+        padding-top: 15px;
+        width: 100%;
+        color: #ef3a3b;
+        font-size: 21px;
+    }
+    
+    .round::before {
+        /* 设置居中方案 */
+        content: "";
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    .flash-img {
+        /* 小闪电的设置 */
+        margin: 25px auto;
+    }
+    
+    .desc {
+        /* desc设置 */
+        font-size: 15px;
+        color: rgba(0, 0, 0, .54);
+        width: 100%;
+    }
+    
+    .time {
+        /* flash时间块的设置 */
+        width: 168px;
+        height: 46px;
+        margin: 28px 33px 0px;
+        font-size: 0;
+    }
+    
+    .time span {
+        display: inline-block;
+        width: 46px;
+        height: 46px;
+        background-color: #605751;
+        font-size: 24px;
+        line-height: 46px;
+        color: #fff;
+    }
+    
+    .time i {
+        display: inline-block;
+        width: 15px;
+        height: 46px;
+        line-height: 46px;
+        font-size: 28px;
+        font-style: normal;
+    }
+    
+    .flash-circle {
+        /* 设置循环 */
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 234px;
+        box-sizing: border-box;
+        height: 374px;
+        width: 992px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    
+    [class^="flash-view"] {
+        display: inline-block;
+        margin-top: 34px;
+    }
+    
+    .flash-item {
+        /* 设置闪购的商品块 */
+        display: inline-block;
+        width: 234px;
+        height: 340px;
+        margin-left: 14px;
+        box-sizing: border-box;
+        padding-top: 39px;
+        border-top: 1px solid transparent;
+        background-color: #fff;
+        text-align: center;
+    }
+    
+    .flash-item:nth-child(5n+1) {
+        border-top-color: #ffac13;
+    }
+    
+    .flash-item:nth-child(5n+2) {
+        border-top-color: #83c44e;
+    }
+    
+    .flash-item:nth-child(5n+3) {
+        border-top-color: #2e96fc;
+    }
+    
+    .flash-item:nth-child(5n+4) {
+        border-top-color: #e53935;
+    }
+    
+    .flash-item:nth-child(5n+5) {
+        border-top-color: #00c0a5;
+    }
+    
+    .cycle {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: 1s;
+    }
+    
+    input.flash-input {
+        /* 隐藏单选框 */
+        position: absolute;
+        visibility: hidden;
+    }
+    
+    input#view1:checked~div.cycle {
+        left: 0px;
+    }
+    
+    input#view2:checked~div.cycle {
+        left: -992px;
+    }
+    
+    input#view3:checked~div.cycle {
+        left: -1984px;
+    }
+    
+    input#view4:checked~div.cycle {
+        left: -2976px;
+    }
+    
+    label.flash-left {
+        /* 设置左移按钮 */
+        position: absolute;
+        box-sizing: border-box;
+        font-size: 14px;
+        right: 36px;
+        top: 0px;
+        width: 36px;
+        height: 24px;
+        border: 1px solid #b0b0b0;
+        margin-right: -1px;
+        z-index: 3;
+    }
+    
+    label.flash-right {
+        /* 设置右移按钮 */
+        position: absolute;
+        box-sizing: border-box;
+        font-size: 14px;
+        right: 0px;
+        top: 0px;
+        width: 36px;
+        height: 24px;
+        border: 1px solid #b0b0b0;
+        margin-left: -1px;
+        z-index: 3;
+    }
+    
+    label.flash-left,
+    label.flash-right {
+        text-align: center;
+        font-size: 16px;
+        line-height: 24px;
+        color: #b0b0b0;
+    }
+    
+    label.flash-left:hover,
+    label.flash-right:hover {
+        color: #ff6700;
+    }
+    
+    label.flash-left:first-of-type,
+    label.flash-right:last-child {
+        opacity: 0.5;
+        color: #eee;
+        border-color: #eee;
+    }
+    
+    label.flash-left:first-child:hover,
+    label.flash-right:last-child:hover {
+        color: #eee;
+    }
+    
+    input.flash-input:checked+*+*+*+*+label.flash-left {
+        z-index: 6;
+    }
+    
+    input.flash-input:checked+*+*+*+*+*+*+*+*+label.flash-right {
+        z-index: 6;
+    }
+    
+    .home-hd {
+        /* 商品内容标题框 */
+        width: 100%;
+        height: 58px;
+    }
+    
+    .home-bd {
+        /* 商品内容框 */
+        width: calc(100% + 14px);
+        height: 628px;
+        margin-left: -14px;
+    }
+    
+    .home-item-row1 {
+        /* 1号框的布局和样式 */
+        float: left;
+        width: 234px;
+        height: 614px;
+        margin-left: 14px;
+    }
+    
+    .home-item-row2 {
+        /* 2号框的布局和样式 */
+        float: left;
+        box-sizing: border-box;
+        margin-left: 14px;
+        width: 234px;
+        height: 300px;
+        padding: 20px 0;
+        margin-bottom: 14px;
+        background-color: #fff;
+    }
+    
+    .home-item-row1:hover,
+    .home-item-row2:hover,
+    .home-item-row3:hover {
+        /* 2号框的hover状态 */
+        transform: translate(0, -1px);
+        box-shadow: 0 3px 15px #b0b0b0;
+    }
+    
+    .home-item-row3 {
+        /* 3号框的布局和样式 */
+        float: left;
+        box-sizing: border-box;
+        margin-left: 14px;
+        width: 234px;
+        height: 143px;
+        margin-bottom: 14px;
+        padding-top: 50px;
+        background-color: #fff;
+        position: relative;
+    }
+    
+    .home-link {
+        /* 设置商品链接格式 */
+        display: block;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
+    
+    [class^="home-item-row"] {
+        text-align: center;
+    }
+    
+    [class^="home-item-row"]::before {
+        /* 设置居中方式 */
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%
+    }
+    
+    .home-figure {
+        /* 设置画布的位置 */
+        margin: 0 37px 18px 37px;
+        width: 160px;
+        height: 160px;
+        box-sizing: border-box;
+        display: inline-block;
+    }
+    
+    .home-img2 {
+        /* 2号框图片大小 */
+        width: 160px;
+        height: 160px;
+        border: none;
+    }
+    
+    .home-item-title {
+        /* 商品的标题 */
+        font-size: 14px;
+        margin: 0 10px 2px;
+        color: #333;
+    }
+    
+    .home-item-title-s {
+        /* #3商品的标题 */
+        text-align: left;
+        font-size: 14px;
+    }
+    
+    .home-item-name1 {
+        /* 商品参数1 */
+        font-size: 12px;
+        height: 18px;
+        margin: 0 10px 10px;
+        color: #b0b0b0;
+    }
+    
+    .home-figure-s {
+        /* 设置小号画布位置 */
+        float: right;
+        box-sizing: border-box;
+        margin-right: 20px;
+        margin-top: -20px;
+        width: 80px;
+        height: 80px;
+    }
+    
+    .home-figure-ss {
+        /* 设置小小号画布位置 */
+        float: right;
+        box-sizing: border-box;
+        margin-right: 35px;
+        margin-top: 0px;
+        width: 48px;
+        height: 48px;
+        background-color: #fff;
+    }
+    
+    .home-figure-ss i {
+        /* 设置小图标 */
+        font-size: 48px;
+        line-height: 48px;
+        color: #ff6700;
+    }
+    
+    .home-figure-more {
+        /* 设置more框的样式 */
+        margin: 0 110px 0 20px;
+        font-size: 18px;
+        color: #666;
+    }
+    
+    .home-figure-more small {
+        /* 设置more框小号 */
+        display: block;
+        font-size: 12px;
+        color: 757575;
+    }
+    
+    .home-item-name2 {
+        /* 商品价格2 */
+        font-size: 14px;
+        margin: 0 10px 14px;
+        color: #ff6700;
+    }
+    
+    .home-item-name2 span {
+        /* 往期价格 */
+        color: #b0b0b0;
+        text-decoration: line-through;
+    }
+    
+    .home-item-name3 {
+        /* 商品价格3 */
+        text-align: left;
+        margin: 0 110px 0 20px;
+        font-size: 12px;
+        color: #ff6700;
+    }
+    
+    h2.title {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 200;
+        line-height: 58px;
+        color: #333;
+    }
+    
+    .hd-more {
+        /* 查看更多 */
+        box-sizing: border-box;
+        float: right;
+        font-size: 16px;
+        height: 58px;
+        line-height: 58px;
+        text-align: center;
+    }
+    
+    .hd-more .home-link {
+        /* 调整“更多”的颜色 */
+        color: #424242;
+    }
+    
+    .hd-more:hover a {
+        /* hover时变色 */
+        color: #ff6700;
+    }
+    
+    .hd-more:hover i {
+        background-color: #ff6700;
+    }
+    
+    .hd-more i {
+        /* 查看更多的箭头格式 */
+        width: 12px;
+        height: 12px;
+        margin-left: 8px;
+        border-radius: 16px;
+        padding: 4px;
+        font-size: 12px;
+        background-color: #e0e0e0;
+        color: #fff;
+        vertical-align: 1px;
+        transition: .4s;
+    }
+    
+    .home-part-a {
+        /* 设置a部分的位置 */
+        display: inline-block;
+        width: 234px;
+        height: 614px;
+    }
+    
+    .home-part-b {
+        /* 设置b部分的位置 */
+        display: inline-block;
+        margin-left: 14px;
+        margin-bottom: 14px;
+        width: 992px;
+        height: 648px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    
+    [class^="part-b-"] {
+        z-index: 3;
+        transition: 5s;
+    }
+    
+    .home-part-a .home-item-row2 {
+        /* 清除part-a的内边距 */
+        padding: 0;
+    }
+    
+    [class^="part-b-"] {
+        /* 定位b- */
+        display: block;
+        width: 100%;
+        height: 614px;
+        position: absolute;
+        top: 34px;
+    }
+    
+    [id^="home-switch-"] {
+        /* 设置check按钮格式 */
+        position: absolute;
+        visibility: hidden;
+    }
+    
+    [class^="home-label-"] {
+        /* 切换标签的共性 */
+        position: absolute;
+        width: 78px;
+        height: 24px;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        top: 0;
+    }
+    
+    [id^="home-switch-a-"]:checked+*+*+*+div {
+        /* 关联home-a与按钮 */
+        z-index: 5;
+    }
+    
+    [id^="home-switch-a-"]:checked+*+label {
+        /* 按钮选中时的label的颜色改变 */
+        color: #ff6700;
+        border-bottom: 2px solid #ff6700;
+    }
+    
+    .home-label-a-l {
+        /* a-home的左侧按钮 */
+        right: 78px;
+    }
+    
+    .home-label-a-r {
+        /* a-home的右侧按钮 */
+        right: 0;
+    }
+    
+    [id^="home-switch-b-"]:checked+*+*+*+*+*+div {
+        /* 关联home-b与按钮 */
+        z-index: 5;
+        transition: 999s;
+    }
+    
+    [id^="home-switch-b-"]:checked+*+*+label {
+        /* 按钮选中时的label的颜色改变 */
+        color: #ff6700;
+        border-bottom: 2px solid #ff6700;
+    }
+    
+    .home-label-b-l {
+        /* b-home的左侧按钮 */
+        right: 156px;
+    }
+    
+    .home-label-b-m {
+        /* b-home的中部按钮 */
+        right: 78px;
+    }
+    
+    .home-label-b-r {
+        /* b-home的右侧按钮 */
+        right: 0;
+    }
+    
+    [id^="home-switch-c-"]:checked+*+*+*+div {
+        /* 关联home-c与按钮 */
+        z-index: 5;
+    }
+    
+    [id^="home-switch-c-"]:checked+*+label {
+        /* 按钮选中时的label的颜色改变 */
+        color: #ff6700;
+        border-bottom: 2px solid #ff6700;
+    }
+    
+    .home-label-c-l {
+        /* c-home的左侧按钮 */
+        right: 78px;
+    }
+    
+    .home-label-c-r {
+        /* c-home的右侧按钮 */
+        right: 0;
+    }
+    
+    [id^="home-switch-d-"]:checked+*+*+*+*+*+div {
+        /* 关联home-d与按钮 */
+        z-index: 5;
+    }
+    
+    [id^="home-switch-d-"]:checked+*+*+label {
+        /* 按钮选中时的label的颜色改变 */
+        color: #ff6700;
+        border-bottom: 2px solid #ff6700;
+    }
+    
+    .home-label-d-l {
+        /* b-home的左侧按钮 */
+        right: 156px;
+    }
+    
+    .home-label-d-m {
+        /* b-home的中部按钮 */
+        right: 78px;
+    }
+    
+    .home-label-d-r {
+        /* b-home的右侧按钮 */
+        right: 0;
+    }
+    
+    [id^="home-switch-e-"]:checked+*+*+*+div {
+        /* 关联home-e与按钮 */
+        z-index: 5;
+    }
+    
+    [id^="home-switch-e-"]:checked+*+label {
+        /* 按钮选中时的label的颜色改变 */
+        color: #ff6700;
+        border-bottom: 2px solid #ff6700;
+    }
+    
+    .home-label-e-l {
+        /* e-home的左侧按钮 */
+        right: 78px;
+    }
+    
+    .home-label-e-r {
+        /* e-home的右侧按钮 */
+        right: 0;
+    }
+    
+    .home-video {
+        /* video主体 */
+        width: calc(100% + 14px);
+        height: 299px;
+        margin-left: -14px;
+    }
+    
+    .home-video-ul {
+        /* videoul格式 */
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .home-video-li {
+        /* videoli格式 */
+        display: inline-block;
+        box-sizing: border-box;
+        width: 296px;
+        height: calc(100% - 14px);
+        margin: 0;
+        margin-left: 14px;
+        margin-bottom: 14px;
+        vertical-align: top;
+        background-color: #fff;
+    }
+    
+    .home-video-li:hover {
+        /* video被hover时的状态改变 */
+        transform: translate(0, -1px);
+        box-shadow: 0 3px 15px #b0b0b0;
+    }
+    
+    .video-figure {
+        /* video框内位置 */
+        width: 100%;
+        height: 180px;
+        margin: 0 0 28px;
+        position: relative;
+        top: 0;
+    }
+    
+    .video-title {
+        /* video名称 */
+        margin: 0 14px 6px;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        color: #333;
+        white-space: nowrap;
+    }
+    
+    .video-play {
+        /* 播放图标 */
+        position: absolute;
+        left: 20px;
+        bottom: 10px;
+        width: 32px;
+        height: 20px;
+        text-align: center;
+        border: 2px solid #fff;
+        border-radius: 12px;
+        color: #fff;
+        overflow: hidden;
+    }
+    
+    .video-play i {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    
+    .video-play:hover {
+        /* 播放图标hover时的改变 */
+        background-color: #ff6700;
+        border-color: #ff6700;
+        color: #fff;
+    }
+    
+    [class^="home-label-a-"]:hover+*+div {
+        /* hover时改变界面 */
+        z-index: 6;
+        transition: .3s;
+        /* transition-delay: 9999s; */
+    }
+    
+    [class^="home-label-b-"]:hover+*+*+div {
+        /* hover时改变界面 */
+        z-index: 6;
+        transition: .3s;
+        /* transition-delay: 9999s; */
+    }
+    
+    [class^="home-label-c-"]:hover+*+div {
+        /* hover时改变界面 */
+        z-index: 6;
+        transition: .3s;
+        /* transition-delay: 9999s; */
+    }
+    
+    [class^="home-label-d-"]:hover+*+*+div {
+        /* hover时改变界面 */
+        z-index: 6;
+        transition: .3s;
+        /* transition-delay: 9999s; */
+    }
+    
+    [class^="home-label-e-"]:hover+*+div {
+        /* hover时改变界面 */
+        z-index: 6;
+        transition: .3s;
+        /* transition-delay: 9999s; */
+    }
