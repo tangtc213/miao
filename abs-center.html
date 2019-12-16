@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            background-color: rgba(0, 0, 0, .1);
+        }
+        
+        div {
+            width: 30px;
+            height: 30px;
+            display: block;
+            background-color: lime;
+        }
+        
+        header,
+        nav,
+        section,
+        main {
+            width: 150px;
+            height: 150px;
+            border: 2px solid;
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        nav::before {
+            display: block;
+            height: 100%;
+            width: 50px;
+            content: "";
+            flex-grow: 1;
+        }
+        
+        nav::after {
+            display: block;
+            height: 100%;
+            width: 50px;
+            content: "";
+            flex-grow: 1;
+        }
+        
+        .a {
+            margin: auto;
+        }
+        
+        .b {
+            align-self: center;
+            flex-grow: 0;
+        }
+        
+        section {
+            align-items: center;
+            justify-content: center;
+        }
+        
+        main::before {
+            content: "";
+            height: 100%;
+            width: 0;
+        }
+        
+        main::after {
+            content: "";
+            height: 100%;
+            width: 0;
+        }
+        
+        main {
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <p>1、用magin:auto居中</p>
+    <header>
+        <div class="a"></div>
+    </header>
+    <p>2、用伪元素加flex-grow居中</p>
+    <nav>
+        <div class="b"></div>
+    </nav>
+    <p>3、用主轴、交叉轴居中</p>
+    <section>
+        <div class="c"></div>
+    </section>
+    <p>4、用伪元素加justify-content: space-between实现居中</p>
+    <main>
+        <div class="d"></div>
+    </main>
+
+</body>
+
+</html>
