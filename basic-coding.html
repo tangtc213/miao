@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="aa" id="ch0103/01">
+        var A = prompt("enter A:",'');
+        var B = prompt('enter B:','');
+        console.log(-(-A)-(-B));
+    </script>
+    <script id="ch0103/02" type="aa">
+        var a = prompt("enter a:", '');
+        var b = prompt('enter b:', '');
+        var c = prompt('enter c:', '');
+        console.log(((a * 1) + (b * 1)) * c);
+    </script>
+    <script id="ch0103/03" type="aa">
+        var a = Number(prompt("enter a:", ''));
+        var b = Number(prompt("enter b:", ''));
+        var c = Number(prompt("enter c:", ''));
+        console.log(Math.turnc((a + b) / c));
+    </script>
+    <script id="ch0103/04" type="aa">
+        var a = prompt("enter a:", '');
+        var b = prompt('enter b:', '');
+        var c = a / b console.log(c.toFixed(), a % b);
+    </script>
+    <script id="ch0103/05" type="aa">
+        var a = prompt("enter a:", '');
+        var b = prompt('enter b:', '');
+        var c = a / b; console.log(c.toFixed(9));
+    </script>
+    <script id="ch0103/06" type="aa">
+        var a = prompt("enter 确诊人数:", '');
+        var b = prompt('enter 死亡人数:', '');
+        var c = b / a * 100; console.log(c.toFixed(3) + '%');
+    </script>
+    <script id="ch0103/07" type="aa">
+        var x = Number(prompt('enter x:'));
+        var a = Number(prompt('enter a:'));
+        var b = Number(prompt('enter b:'));
+        var c = Number(prompt('enter c:'));
+        var d = Number(prompt('enter d:'));
+        var num = a * Math.pow(x, 3) + b * Math.pow(x, 2) + c * Math.pow(x, 1) + d;
+        console.log(num)
+    </script>
+    <script id="ch0103/08" type="aa">
+        var F = Number(prompt('输入华氏温度：'));
+        var C = 5 * (F - 32) / 9;
+        console.log(C.toFixed(5));
+    </script>
+    <script id="ch0103/09" type="aa">
+        var PI = 3.14159;
+        var r = Number(prompt('请输入圆的半径：'));
+        var d = r * 2; var C = d * PI; var S = PI * Math.pow(r, 2);
+        console.log(d.toFixed(4), C.toFixed(4), S.toFixed(4));
+    </script>
+    <script id="ch0103/10" type="aa">
+        var r1 = Number(prompt('enter r1:'));
+        var r2 = Number(prompt('enter r2:'));
+        var R = 1 / (1 / r1 + 1 / r2);
+        console.log(R.toFixed(2));
+    </script>
+    <script id="ch0103/11" type="aa">
+        var a = Number(prompt('enter a:'));
+        var b = Number(prompt('enter b:'));
+        var r = a % b
+        console.log(r.toFixed(4))
+    </script>
+    <script id="ch0103/12" type="aa">
+        var PI = 3.14;
+        var r = Number(prompt('enter r :'));
+        var V = 4 / 3 * PI * Math.pow(r, 3);
+        console.log(V.toFixed(2));
+    </script>
+    <script id="ch0103/13" type="aa">
+        var num = Number(prompt('输入一个三位数：'));
+        var outnum1 = Math.trunc(num / 100);
+        var outnum2 = Math.trunc((num - outnum1 * 100) / 10);
+        var outnum3 = Math.trunc((num - outnum1 * 100 - outnum2 * 10) / 1);
+        console.log('' + outnum3 + outnum2 + outnum1);
+    </script>
+    <script id="ch0103/14" type="aa">
+        var PI = 3.14159;
+        var h = Number(prompt('enter h:'));
+        var r = Number(prompt('enter r:'));
+        var V = h * PI * r * r;
+        var T = Math.ceil(20000 / V);
+        console.log(T)
+    </script>
+    <script id="ch0103/15" type="aa">
+        var n = Number(prompt('enter n:'));
+        var x = Number(prompt('enter x:'));
+        var y = Number(prompt('enter y:'));
+        var remain = n - Math.ceil(y / x);
+        console.log(remain);
+    </script>
+    <script id="ch0103/16" type="aa">
+        var xa = Number(prompt('enter xa:'));
+        var ya = Number(prompt('enter ya:'));
+        var xb = Number(prompt('enter xb:'));
+        var yb = Number(prompt('enter yb:'));
+        var num = Math.sqrt((xa - xb) * (xa - xb) + (ya - yb) * (ya - yb));
+        console.log(num.toFixed(3));
+    </script>
+    <script id="ch0103/17" type="aa">
+        var xa = Number(prompt('enter xa:'));
+        var ya = Number(prompt('enter ya:'));
+        var xb = Number(prompt('enter xb:'));
+        var yb = Number(prompt('enter yb:'));
+        var xc = Number(prompt('enter xc:'));
+        var yc = Number(prompt('enter yc:'));
+        var a = Math.sqrt((xa - xb) * (xa - xb) + (ya - yb) * (ya - yb));
+        var b = Math.sqrt((xa - xc) * (xa - xc) + (ya - yc) * (ya - yc));
+        var c = Math.sqrt((xb - xc) * (xb - xc) + (yb - yc) * (yb - yc));
+        var p = (a + b + c) / 2;
+        var S = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+        console.log(S.toFixed(2));
+    </script>
+    <script id="ch0103/18" type="aa">
+        var a1 = Number(prompt('enter a1:'));
+        var a2 = Number(prompt('enter a2:'));
+        var n = Number(prompt('enter n:'));
+        var d = a2 - a1;
+        var an = a1 + (n - 1) * d;
+        console.log(an);
+    </script>
+    <script id="ch0103/19" type="aa">
+        var A = Number(prompt('enter A:'));
+        var B = Number(prompt('enter B:'));
+        console.log(A * B);
+    </script>
+    <script id="ch0103/20" type="aa">
+        var n = Number(prompt('enter n:'));
+        console.log(Math.pow(2, n));
+    </script>
+    <script id="ch0104/01" type="bb">
+        var num = Number(prompt("please inter a num:"));
+        if (num) {
+            if (num < 0) {
+                console.log( 'negative');
+            } else console.log( 'positive');
+        } else console.log(0);
+    </script>
+    <script id="ch0104/02" type="bb">
+        var num = Number(prompt('inter a num:'));
+        var abs;
+        if (num < 0) {
+            abs = -num;
+        }
+        console.log(abs.toFixed(2));
+    </script>
+    <script id="ch0104/03" type="bb">
+        var num = Number(prompt('inter a number'));
+        if (num % 2) {
+            console.log('even');
+        }
+        else
+            console.log('odd');
+    </script>
+    <script id="ch0104/04" type="bb">
+        var inter = prompt('inter a character:');
+        var num = inter.charCodeAt();
+        if (num % 2) {
+            console.log('No');
+        }
+        else
+            console.log('yes');
+    </script>
+    <script id="ch0104/05" type="bb">
+        var a = Number(prompt('inter a:'));
+        var b = Number(prompt('inter b:'));
+
+        if (a > b) {
+            console.log('>');
+        }
+        else
+            console.log('<');
+    </script>
+    <script id="ch0104/06" type="bb">
+        var num = Number(prompt('inter a num:'));
+        if (num >= 10 && num <= 99) {
+            console.log(1);
+        }
+        else
+            console.log(0);
+    </script>
+    <script id="ch0104/07" type="bb">
+        var lucky = +prompt('enter lucky number:');
+        var encourage = +prompt('enter encourage:');
+        if (lucky >= 10 && encourage >= 20) {
+            console.log('1');
+        }
+        else
+        console.log('0');
+    </script>
+    <script id="ch0104/08" type="bb">
+        var num = +prompt('inter a number:');
+        if (num % 5 === 0 && num % 3 === 0) {
+            console.log('yes');
+        }
+        else
+            console.log('No');
+    </script>
+    <script id="ch0104/09" type="bb">
+        var num = +prompt('inter a number:');
+        var out = '';
+        if (num % 3 === 0) {
+            out = out + 3 + '\t';
+        }
+        if (num % 5 === 0) {
+            out = out + 5 + '\t';
+        }
+        if (num % 7 === 0) {
+            out = out + 7 + '\t';
+        }
+        console.log(out);
+        if (!(num % 3 ===0 || num % 5 ===0 || num % 7 === 0)) {
+            console.log('n');
+        }
+    </script>
+    <script id="ch0104/10" type="bb">
+        var a = +prompt("inter a number:");
+        var b = +prompt("inter b number:");
+
+        if (a < 60 && b >= 60 || a >= 60 && b < 60)
+            console.log(1);
+        else
+            console.log(0);
+    </script>
+    <script id="ch0104/11" type="bb">
+        var date = +prompt("inter a date");
+        if (date === 1 || date === 3 || date === 5)
+            console.log('No');
+        else
+            console.log('Yes');
+    </script>
+    <script id="ch0104/12" type="bb">
+        var S = +prompt('inter a mile')
+        if (S > 100)
+            console.log('bike');
+        else
+            console.log('walk');
+    </script>
+    <script id="ch0104/13" type="bb">
+        var x = +prompt('inter x:');
+        var y;
+        if (x < 5 || x >= 0)
+            console.log((-x + 2.5).toFixed(3));
+        else if (x >= 5 || x < 10)
+            console.log((2 - 1.5 * (x - 3) * (x - 3)).toFixed(3));
+        else
+            console.log((x / 2 - 5).toFixed(3));
+    </script>
+    <script id="ch0104/14" type="bb">
+        var weight = +prompt('inter the weight:');
+        var sign = prompt('if urgent ? y/n');
+        var price = 0;
+        if (sign === 'y')
+            price = price + 5;
+        else
+            price = price;
+        if (weight <= 1000) {
+            price = price + 8;
+        }
+        else
+            price = price + 8 + Math.ceil((weight - 1000) / 500)* 4;
+        console.log(price);
+    </script>
+    <script id="ch0104/15" type="bb">
+        var a = +prompt('inter a:');
+        var b = +prompt('inter b:');
+        var c = +prompt('inter c:');
+        var max = (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
+        console.log(max);
+    </script>
+    <script id="ch0104/16" type="bb">
+        var a = +prompt('inter a:');
+        var b = +prompt('inter b:');
+        var c = +prompt('inter c:');
+        if ( a + b > c && b + c > a && a + c > b)
+            console.log('yes');
+        else
+            console.log('No');
+    </script>
+    <script id="ch0104/17" type="bb">
+        var x = +prompt('inter a year');
+        if ((x % 400 === 0) || ((x % 100 !== 0) && (x % 4 === 0)))
+            console.log('Y');
+        else
+            console.log('N');
+    </script>
+    <script id="ch0104/18" type="bb">
+        var x = +prompt('inter x:');
+        var y = +prompt('inter y:');
+        if (x >= -1 && x <= 1 && y >= -1 && y <= 1)
+        console.log('yes');
+        else
+        console.log('no');
+    </script>
+    <script id="ch0104/19" type="bb">
+
+        var x = +prompt('inter x:');
+        var y = +prompt('inter y:');
+        var operator = prompt('inter operator');
+        switch (operator) {
+            case '+':
+                console.log(x + y);
+                break;
+            case '-':
+                console.log(x - y);
+                break;
+            case '*':
+                console.log(x * y);
+                break;
+            case '/':
+                if (y === 0)
+                    console.log('Divided by zero');
+                else
+                    console.log(x / y);
+                break;
+            default:
+                console.log('Invalid operator!');
+        }
+    </script>
+    <script id="ch0104/20" type="bb">
+        var a = +prompt('inter a:');
+        var b = +prompt('inter b:');
+        var c = +prompt('inter c:');
+        var delta = b * b - 4 * a * c;
+        var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+        var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+        var xr = -b / (a * 2);
+        var xi = Math.sqrt(-delta) / (2 * a);
+
+        if (!delta) {
+            console.log('x1 = x2 = ' + x1.toFixed(5));
+        }
+        else if(delta > 0)
+            console.log('x1 = ' + x1.toFixed(5) + ' x2 = ' + x2.toFixed(5))
+        else
+            console.log('x1 = ' + xr.toFixed(5) + '+' + xi.toFixed(5) + 'i' + ' x2 = ' + xr.toFixed(5) + '-' + xi.toFixed(5) + 'i');
+    </script>
+    <script id="ch0104/21" type="bb">
+        var n = +prompt('inter n:');
+        var x = +prompt('inter x:');
+        var y = +prompt('inter y:');
+        var rest = n - Math.ceil(y / x);
+        console.log(rest);
+    </script>
+</body>
+</html>
