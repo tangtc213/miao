@@ -352,5 +352,323 @@
         var rest = n - Math.ceil(y / x);
         console.log(rest);
     </script>
+    <script id="ch0105/01" type="cc">
+        var num = +prompt('inter students number:');
+        var sum = 0;
+        for(var i = 1; i <= num ; i++)
+            sum = sum + Number(prompt('inter the student '));
+        console.log((sum / num).toFixed(2));
+    </script>
+    <script id="ch0105/02" type="cc">
+        var sum = 0;
+        for(var i = 1; i <= 12 ; i++) {
+            sum += +prompt('inter the cost:');
+        }
+        console.log('$' + (sum / 12).toFixed(2));
+    </script>
+    <script id="ch0105/03" type="cc">
+        var num = +prompt('inter number:');
+        var sum = 0;
+        for(var i = 1; i <= num ; i++)
+            sum = sum + Number(prompt('inter num'));
+        console.log((sum / num).toFixed(4));
+    </script>
+    <script id="ch0105/04" type="cc">
+        var num = +prompt('inter number:');
+        var sum = 0;
+        for(var i = 1; i <= num ; i++)
+            sum = sum + Number(prompt('inter num :'));
+        console.log(sum + ' ' + (sum / num).toFixed(5));
+    </script>
+    <script id="ch0105/05" type="cc">
+        var num = +prompt('inter the student number:');
+        var result;
+        var Max = 0;
+        for (var i = 1; i <= num; i++) {
+            result = +prompt('inter the student result');
+            if (Max < result)
+                Max = result;
+        }
+        console.log(Max);
+    </script>
+    <script id="ch0105/06" type="cc">
+        var num = +prompt('inter the number:');
+        var result;
+        var Max = 0, Min = 1000;
+        for (var i = 1; i <= num; i++) {
+            result = +prompt('inter the num');
+            if (Max < result){
+                Max = result;
+            }
+            if (Min > result){
+                Min = result;
+            }
+        }
+        console.log(Max - Min);
+    </script>
+    <script id="0105/07" type="cc">
+        var days = +prompt('inter the days');
+        var gold = 0, silver = 0, copper = 0;
+        for (var i = 1; i <= days; i++) {
+            gold += +prompt('inter the gold number:');
+            silver += +prompt('inter the silver number:');
+            copper += +prompt('inter the copper number:');
+        }
+        console.log(gold + ' ' + silver + ' ' + copper + ' ' + (gold + silver + copper));
+    </script>
+    <script id="0105/08" type="cc">
+        var n = +prompt('intern n:');
+        var sum = (n - 2) * 180;
+        for (var i = 1; i < n; i++) {
+            sum -= +prompt('inter a deg');
+        }
+        console.log(sum)
+    </script>
+    <script id="0105/09" type="cc">
+        var m = +prompt('inter m:');
+        var n = +prompt('inter n:');
+        var x = Math.floor(m / 2);
+        var y = Math.ceil(n / 2);
+        var sum = y * y - x * x;
+        console.log(sum);
+    </script>
+    <script id="0105/10" type="cc">
+        var m = +prompt('inter m:');
+        var n = +prompt('inter n:');
+        sum = 0;
+        for(var i = m; i <= n; i++) {
+            if (i % 17 === 0)
+                sum += i;
+        }
+        console.log(sum);
+    </script>
+    <script id="0105/11" type="cc">
+        var n = +prompt('inter n:');
+        var sum1 = 0, sum5 = 0, sum10 = 0;
+        for (var i = 1; i <= n; i++) {
+            switch (+prompt('inter num:')) {
+                case 1:
+                sum1++;
+                break;
+                case 5:
+                sum5++;
+                break;
+                case 10:
+                sum10++;
+                break;
+            }
+
+        }
+        console.log(sum1 + '\n' + sum5 + '\n' + sum10);
+    </script>
+    <script id="0105/12" type="cc">
+        var n = +prompt('inter n:');
+        var size = +prompt('inter size');
+        var sum = 0;
+        for (var i = 1; i <= n; i++) {
+            if (+prompt('inter a num:') == size)
+                sum++;
+        }
+        console.log(sum);
+    </script>
+    <script id="0105/13" type="cc">
+        var a = +prompt('inter a:');
+        var result = 1;
+        var n = +prompt('inter n:');
+        for (var i = 1; i <= n; i++)
+            result *= a;
+        console.log(result);
+    </script>
+    <script id="0105/14" type="cc">
+        var num = +prompt('inter num:');
+        var year = +prompt('inter year');
+        for (var i = 1; i <= year; i++)
+            num *= 1.001;
+        console.log(num.toFixed(4));
+    </script>
+    <script id="0105/15" type="cc">
+        var R = +prompt("inter R");
+        var M = +prompt('inter M');
+        var Y = +prompt('inter Y');
+
+        for (var i = 1; i <= Y; i++)
+            M *= 1 + R / 100;
+        console.log(Math.floor(M));
+    </script>
+    <script id="0105/16" type="cc">
+        var N = +prompt('inter N');
+        var K = +prompt('inter K');
+        var i = 1, M = 200;
+        while(i * N < M) {
+            M *= 1 + K / 100;
+            i++;
+        }
+        console.log (i);
+    </script>
+    <script id="0105/17" type="cc">
+        var x = +prompt('inter x');
+        function fib(n) {
+            var f = 0,
+                g = 1;
+            while (1 < n--) {
+                g = f + g;
+                f = g - f;
+            }
+            return g;
+        }
+        console.log(fib(x));
+    </script>
+    <script id="0105/18" type="cc">
+        var n = +prompt('inter n');
+        var x1 = +prompt('inter x1');
+        var x2 = +prompt('inter x2');
+        for (var i = 1;i <= n - 1; i++) {
+        var a = +prompt('inter a');
+        var b = +prompt('inter b');
+        if (b / a - x2 / x1 > 0.05)
+            console.log('better')
+        else if (x2 / x1 - b / a> 0.05)
+            console.log('better')
+        else
+            console.log('same')
+        }
+    </script>
+    <script id="0105/19" type="cc">
+        var n = +prompt('inter n');
+        var x,y,r;
+        var sum = 0;
+        var T;
+        for (var i = 0; i < n; i++) {
+            x = +prompt('inter x');
+            y = +prompt('inter y');
+            r = +prompt('inter r');
+            T = Math.sqrt(x * x + y * y) / 50;
+            sum += r * 1.5 + T * 2;
+        }
+        console.log(Math.ceil(sum));
+    </script>
+    <script id="0105/20" type="cc">
+        var H = +prompt('inter H:');
+        function height(n, x) {
+            if (n-- < 1)
+            return x;
+            else
+            return height(n, x) / 2;
+        }
+        function Sum(n, x) {
+            var sum = x;
+            for (var i = 1; i < n; i++)
+                sum += 2 * height(i, H);
+            return sum;
+        }
+        console.log(Sum(10, H),height(10, H));
+    </script>
+    <script id="ch0105/21" type="cc">
+        var n = +prompt('inter n:');
+        while (n > 1) {
+            if (n % 2 == 1) {
+                console.log(n + '*3+1 =' + Number(3 * n + 1))
+                n = 3 * n + 1;
+            }
+            else {
+                console.log(n + '/2=' + n / 2)
+                n = n / 2;
+            }
+        }
+        console.log('end');
+    </script>
+    <script id="ch0105/22" type="cc">
+        var a = 0;
+        var sum = 0;
+        var num, size = 0;
+        for(i = 1; i <= 12; i++) {
+            num = +prompt('inter a number');
+            if(a + 300 < num) {
+                size = i;
+            }
+            sum += Math.floor((a + 300 - num) / 100) * 100;
+            a = ((a + 300) - num) % 100;
+        }
+        if (size === 0)
+            console.log(sum * 1.2 + a);
+        else
+            console.log(-size);
+    </script>
+    <script id="ch0105/23" type="cc">
+        var max = +prompt('inter max');
+        var n = +prompt('inter n');
+        var sum = 0, size = 0;
+        var temp;
+        for (var i = 1; i <= n; i++) {
+            temp = Number(prompt('inter num'));
+            if (sum + temp > max)
+                size++;
+            else
+                sum += temp;
+        }
+        console.log(size);
+    </script>
+    <script id="0105/24" type="cc">
+        var n = +prompt('inter n:');
+        var a,b;
+        var size = 0, max = 0, temp = 0;
+        for (var i = 1; i <= n; i++) {
+            a = +prompt('inter a');
+            b = +prompt('inter b');
+            if (a >= 90 && a <= 140 && b >= 60 && b <= 90){
+                size++;
+                temp = size;
+                if (max < temp)
+                    max = temp;
+            }
+            else {
+                size = 0;
+            }
+        }
+        console.log(max);
+    </script>
+    <script id="ch0105/25" type="cc">
+        for (var x = 81; x <= 400; x++) {
+            if(Math.floor(x / 81) == x % 7 && Math.floor(x / 9) % 9 == Math.floor(x / 7) % 7 && x % 9 == Math.floor(x / 49)) {
+                console.log(x);
+                console.log(x.toString(7));
+                console.log(x.toString(9));
+            }
+        }
+    </script>
+    <script id="ch0105/26" type="cc">
+        var n = +prompt('inter n:');
+        var x, size = 0;
+        for (var i = 1; i <= n;i++) {
+            x = +prompt('inter a num');
+            if (x % 10 > Math.floor(x / 1000) + Math.floor((x % 1000) / 100) + Math.floor((x % 100) / 10))
+                size++;
+        }
+        console.log(size);
+    </script>
+    <script id="ch0105/27" type="cc">
+        var n = +prompt('inter n:');
+        var a1 = 1, i = 0;
+        var sum = 0;
+        while (sum <= n) {
+            sum += a1;
+            a1 = a1 / 2;
+            i++;
+        }
+        console.log(i);
+    </script>
+    <script id="0105/28" type="cc">
+        var n = +prompt('inter n:');
+        var k = '';
+        size = 1;
+        while (n >= 1) {
+            k = k + n % 10 + ' ';
+            n = Math.floor(n / 10);
+        }
+        console.log(k);
+    </script>
+    <script id="0105/29" type="cc">
+
+    </script>
 </body>
 </html>
