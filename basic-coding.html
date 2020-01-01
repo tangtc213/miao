@@ -657,15 +657,306 @@
         }
         console.log(i);
     </script>
-    <script id="0105/28" type="cc">
+    <script id="ch0105/28" type="cc">
         var n = +prompt('inter n:');
         var k = '';
-        size = 1;
         while (n >= 1) {
             k = k + n % 10 + ' ';
             n = Math.floor(n / 10);
         }
         console.log(k);
+    </script>
+    <script id="ch0105/29" type="cc">
+        var x = +prompt('inter x:');
+        var k = 0;
+        var n, x1, x2;
+        var size = 0;
+        if (x > 0) {
+            x1 = x;
+            while (x1 >= 1) {
+                x1 = Math.floor(x1 / 10);
+                size++;
+            }
+            while (x >= 1) {
+                k = k + (x % 10) * Math.pow(10,size - 1);
+                x = Math.floor(x / 10);
+                size--;
+            }
+            console.log(k);
+        } else {
+            x2 = -x;
+            n = x2;
+            while (x2 >= 1) {
+                x2 = Math.floor(x2 / 10);
+                size++;
+            }
+            while (n >= 1) {
+                k = k + (n % 10) * Math.pow(10,size - 1);
+                n = Math.floor(n / 10);
+                size--;
+            }
+            console.log(-k);
+        }
+    </script>
+    <script id="ch0105/30" type="cc">
+        var n = +prompt('inter a number');
+        var c = +prompt('inter a counter');
+        var m, k = 0;
+        m = n;
+        while (m >= 1) {
+            if (m % 10 === 3) {
+                k++;
+            }
+            m = Math.floor(m / 10);
+        }
+            if (k === c && n % 19 === 0)
+                console.log('YES');
+            else
+                console.log('NO');
+    </script>
+    <script id="ch0105/31" type="cc">
+        var N = +prompt('inter N');
+        var M = +prompt('inter M');
+        var list = [];
+        var sum = 1;
+        for (var i = 0; i < N; i++) {
+            list[i] = 0;
+        }
+        for (var n =2 ; n <= M; n++) {
+            for(var j = 2; j < N; j++) {
+                if (j % n === 0)
+                    list[j] = !list[j];
+            }
+        }
+        for (var l = 2; l < N; l++) {
+            if(list[l] == 0)
+                sum = sum + ',' + l;
+        }
+        console.log(sum);
+        console.log(list);
+    </script>
+    <script id="ch0105/32" type="cc">
+        var n = +prompt('inter n:');
+        var sum = 0;
+        var p = 1, q = 2;
+        sum = q / p;
+        for (var i = 1; i < n; i++) {
+            q = p + q;
+            p = q - p;
+            sum += q / p;
+        }
+        console.log(sum.toFixed(4));
+    </script>
+    <script id="ch0105/33" type="cc">
+        var n = +prompt('inter n:');
+        var size = 1;
+        var sum = 0;
+        for(i = 1; i <= n; i++) {
+            sum += (1 / i) * size;
+            size = -size;
+        }
+        console.log(sum.toFixed(4));
+    </script>
+    <script id="ch0106/34" type="cc">
+        var n = +prompt('inter n:');
+        var sum = 0;
+        function factorial(n) {
+            var s = 1;
+            for(var j = 1; j <= n; j++)
+                s = s * j;
+            return s;
+        }
+        for (i = 1; i <= n; i++) {
+            sum += factorial(i);
+        }
+        console.log(sum);
+    </script>
+    <script id="ch0105/35" type="cc">
+        var n = +prompt('inter n:');
+        var sum = 1;
+        function factorial(n) {
+            var s = 1;
+            for(var j = 1; j <= n; j++)
+                s = s * j;
+            return s;
+        }
+        for (i = 1; i <= n; i++)
+            sum += 1 / factorial(i);
+        console.log(sum.toFixed(10));
+    </script>
+    <script id="ch0105/36" type="cc">
+        var x = +prompt('inter x');
+        var n = +prompt('inter n');
+        var sum = 0;
+        for (var i = 0; i <= n ; i++) {
+            sum += Math.pow(x, i);
+        }
+        console.log(sum.toFixed(2));
+    </script>
+    <script id="ch0105/37" type="cc">
+        var M = +prompt('inter M');
+        var N = +prompt('inter N');
+        var X = +prompt('inter X');
+
+        for (; X > 0; X--) {
+            N += Math.floor(M / N)
+        }
+        console.log(N);
+    </script>
+    <script id="ch0105/38" type="cc">
+        var n = +prompt('inter n:');
+        var a = '';
+        var temp;
+        for(var i = n; i >= 0; i--) {
+            temp = +prompt('inter a');
+            if (i === n && temp === 0) {
+                a = 0;
+                break;
+            }
+            if (i == 0)
+                continue;
+            a += temp * i + ' ';
+        }
+        console.log(a);
+    </script>
+    <script id="ch0105/39" type="cc">
+        var n = +prompt('inter num:');
+        var sum = 0;
+        function isRel7(x) {
+            var size = 1;
+            if (x % 7 == 0)
+                size = 0;
+            while (x >= 1) {
+                if (x % 10 == 7)
+                    size = 0;
+                x = Math.floor(x / 10);
+            }
+            return size;
+        }
+        for (var i = 1; i <= n; i++) {
+            sum += Math.pow(i * isRel7(i), 2)
+        }
+        console.log(sum);
+    </script>
+    <script id="ch0105/40" type="cc">
+        var n = +prompt('inter n:');
+        var sum = 0;
+        function getsum1(x) {
+            var size = 0;
+            while (x >= 1) {
+                if(x % 10 == 1)
+                    size++;
+                x = Math.floor(x / 10);
+            }
+            return size;
+        }
+        for (var i = 1; i <= n; i++) {
+            sum = sum + getsum1(i);
+        }
+        console.log(sum);
+    </script>
+    <script id="ch0105/41" type="cc">
+        var L = +prompt('inter L:');
+        var R = +prompt('inter R:');
+        var sum = 0;
+        function getsum2(x) {
+            var size = 0;
+            while (x >= 2) {
+                if(x % 10 == 2)
+                    size++;
+                x = Math.floor(x / 10);
+            }
+            return size;
+        }
+        for (var i = L; i <= R; i++) {
+            sum = sum + getsum2(i);
+        }
+        console.log(sum);
+    </script>
+    <script id="ch0105/42" type="cc">
+        var m = +prompt('inter m');
+        var n = +prompt('inter n:');
+        var mark = prompt('inter mark');
+        var size = +prompt('inter 1 / 0');
+        function getmark(x, k, a, mk) {
+            var li = '';
+            if (x == 1 || x == k) {
+                return mk;
+            } else if(a == 0) {
+                return ' ';
+            } else
+                return mk;
+        }
+        for(var i = m; i > 0; i--) {
+            var list = '';
+            if(i === m || i === 1) {
+                for (var j = n; j > 0; j--)
+                    list += mark;
+            } else {
+                for (var j = n; j > 0; j--) {
+                    list += getmark(j, n, size, mark);
+                }
+            }
+            console.log(list);
+        }
+    </script>
+    <script id="ch0105/43" type="cc">
+        var n = +prompt('inter n:');
+        var Max;
+
+        function isPrimeNumber(x) {
+            var size = 1;
+            for(var j = 2; j <= Math.floor(Math.sqrt(x)); j++) {
+            if (x % j === 0)
+                size = 0;
+            }
+            return size;
+        }
+        for (i = 2; i <= n - 1; i++) {
+            if(n % i === 0 && isPrimeNumber(i)) {
+                Max = i;
+            }
+        }
+        console.log(Max);
+    </script>
+    <script id="ch0105/44" type="cc">
+    var n = +prompt('inter n');
+    var list = [];
+    var m = 0;
+    function isPrimeNumber(x) {
+            var size = 1;
+            for(var j = 2; j <= Math.floor(Math.sqrt(x)); j++) {
+            if (x % j === 0)
+                size = 0;
+            }
+            if (x == 2)
+                size = 1;
+            return size;
+        }
+    for (i = 2; i < 10000; i++) {
+        if (isPrimeNumber(i)) {
+            m++;
+            list[m] = i;
+        }
+    }
+    console.log(list[n]);
+    </script>
+
+    <script id="ch0105/45" type="cc">
+        var n = +prompt('inter n:');
+        var sum = 0;
+        var T = 1;
+        var G = 1;
+
+        for (var i = 1; i <= n ; i++) {
+            if(T == 0) {
+            G++;
+            T = G;
+            }
+            sum += G;
+            T--;
+        }
+        console.log(sum);
     </script>
 </body>
 </html>
