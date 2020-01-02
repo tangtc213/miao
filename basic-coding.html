@@ -1168,14 +1168,7 @@
     </script>
     <script id="sqrt">
         var n = +prompt('inter a number');
-        var largen = 1000000 * n;
-        var m;
-        for (var i = 1; i <= largen; i++) {
-            if((i * i - largen <= 0) && ((i + 1) * (i + 1) -largen >=0))
-                m = i;
-        }
-        console.log(m / 1000);
-
+        console.log(Math.sqrt(n).toFixed(3));
     </script>
 </body>
 </html>
