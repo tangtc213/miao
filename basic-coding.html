@@ -27,8 +27,8 @@
     <script id="ch0103/04" type="aa">
         var a = prompt("enter a:", '');
         var b = prompt('enter b:', '');
-        var c = a / b;
-        console.log(c.toFixed(3), a % b);
+        var c =Math.floor(a / b);
+        console.log(c, a % b);
     </script>
     <script id="ch0103/05" type="aa">
         var a = prompt("enter a:", '');
@@ -207,22 +207,28 @@
         else
             console.log('NO');
     </script>
-    <script id="ch0104/09" type="bb">
+    <script id="ch0104/09">
         var num = +prompt('inter a number:');
-        var out = '';
-        if (num % 3 === 0) {
-            out = out + 3 + ' ';
+        if (num % 3 ===0 && num % 5 === 0 && num % 7 === 0)
+            console.log('3 5 7');
+        else if (num % 3 === 0 && num % 5 === 0 || num % 3 === 0 && num % 7 === 0 || num % 5 === 0 && num % 7 === 0) {
+            if (num % 3 === 0 && num % 5 === 0)
+                console.log('3 5');
+            if (num % 3 === 0 && num % 7 === 0)
+                console.log('3 7');
+            if (num % 5 === 0 && num % 7 === 0)
+                console.log('5 7');
         }
-        if (num % 5 === 0) {
-            out = out + 5 + ' ';
+        else if (num % 3 === 0 || num % 5 === 0 || num % 7 === 0) {
+            if (num % 3 === 0)
+                console.log('3');
+            if (num % 5 === 0)
+                console.log('5');
+            if (num % 7 === 0)
+                console.log('7');
         }
-        if (num % 7 === 0) {
-            out = out + 7 + ' ';
-        }
-        console.log(out);
-        if (!(num % 3 ===0 || num % 5 ===0 || num % 7 === 0)) {
-            console.log('n');
-        }
+        else
+            console('n');
     </script>
     <script id="ch0104/10" type="bb">
         var a = +prompt("inter a number:");
@@ -244,7 +250,7 @@
         var S = +prompt('inter a mile')
         if (S == 100)
             console.log('All');
-        else if (s > 100)
+        else if (S > 100)
             console.log('Bike');
         else
             console.log('Walk');
@@ -807,7 +813,7 @@
         }
         console.log(N);
     </script>
-    <script id="ch0105/38">
+    <script id="ch0105/38" type="cc">
         var n = +prompt('inter n:');
         var a = '';
         var temp;
@@ -815,10 +821,7 @@
             temp = +prompt('inter a');
             if (i == 0)
                 continue;
-            if (i === 1)
-                a += temp * i;
-            else
-                a += temp * i + ' ';
+            a += temp * i + ' ';
             if (i === n && temp === 0) {
                 a = 0;
             }
