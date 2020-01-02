@@ -22,12 +22,12 @@
         var a = Number(prompt("enter a:", ''));
         var b = Number(prompt("enter b:", ''));
         var c = Number(prompt("enter c:", ''));
-        console.log(Math.turnc((a + b) / c));
+        console.log(Math.trunc((a + b) / c));
     </script>
     <script id="ch0103/04" type="aa">
         var a = prompt("enter a:", '');
         var b = prompt('enter b:', '');
-        var c = a / b console.log(c.toFixed(), a % b);
+        var c = a / b console.log(c.toFixed(3), a % b);
     </script>
     <script id="ch0103/05" type="aa">
         var a = prompt("enter a:", '');
@@ -156,7 +156,7 @@
     </script>
     <script id="ch0104/03" type="bb">
         var num = Number(prompt('inter a number'));
-        if (num % 2) {
+        if (num % 2 === 0) {
             console.log('even');
         }
         else
@@ -166,10 +166,10 @@
         var inter = prompt('inter a character:');
         var num = inter.charCodeAt();
         if (num % 2) {
-            console.log('No');
+            console.log('NO');
         }
         else
-            console.log('yes');
+            console.log('YES');
     </script>
     <script id="ch0104/05" type="bb">
         var a = Number(prompt('inter a:'));
@@ -192,7 +192,7 @@
     <script id="ch0104/07" type="bb">
         var lucky = +prompt('enter lucky number:');
         var encourage = +prompt('enter encourage:');
-        if (lucky >= 10 && encourage >= 20) {
+        if (lucky >= 10 || encourage >= 20) {
             console.log('1');
         }
         else
@@ -201,22 +201,22 @@
     <script id="ch0104/08" type="bb">
         var num = +prompt('inter a number:');
         if (num % 5 === 0 && num % 3 === 0) {
-            console.log('yes');
+            console.log('YES');
         }
         else
-            console.log('No');
+            console.log('NO');
     </script>
     <script id="ch0104/09" type="bb">
         var num = +prompt('inter a number:');
         var out = '';
         if (num % 3 === 0) {
-            out = out + 3 + '\t';
+            out = out + 3 + ' ';
         }
         if (num % 5 === 0) {
-            out = out + 5 + '\t';
+            out = out + 5 + ' ';
         }
         if (num % 7 === 0) {
-            out = out + 7 + '\t';
+            out = out + 7 + ' ';
         }
         console.log(out);
         if (!(num % 3 ===0 || num % 5 ===0 || num % 7 === 0)) {
@@ -235,16 +235,18 @@
     <script id="ch0104/11" type="bb">
         var date = +prompt("inter a date");
         if (date === 1 || date === 3 || date === 5)
-            console.log('No');
+            console.log('NO');
         else
-            console.log('Yes');
+            console.log('YES');
     </script>
     <script id="ch0104/12" type="bb">
         var S = +prompt('inter a mile')
-        if (S > 100)
-            console.log('bike');
+        if (S == 100)
+            conssole.log('All');
+        else if (s > 100)
+            console.log('Bike');
         else
-            console.log('walk');
+            console.log('Walk');
     </script>
     <script id="ch0104/13" type="bb">
         var x = +prompt('inter x:');
@@ -341,9 +343,9 @@
             console.log('x1 = x2 = ' + x1.toFixed(5));
         }
         else if(delta > 0)
-            console.log('x1 = ' + x1.toFixed(5) + ' x2 = ' + x2.toFixed(5))
+            console.log('x1 = ' + x1.toFixed(5) + ';x2 = ' + x2.toFixed(5))
         else
-            console.log('x1 = ' + xr.toFixed(5) + '+' + xi.toFixed(5) + 'i' + ' x2 = ' + xr.toFixed(5) + '-' + xi.toFixed(5) + 'i');
+            console.log('x1 = ' + xr.toFixed(5) + '+' + xi.toFixed(5) + 'i' + ';x2 = ' + xr.toFixed(5) + '-' + xi.toFixed(5) + 'i');
     </script>
     <script id="ch0104/21" type="bb">
         var n = +prompt('inter n:');
@@ -459,7 +461,9 @@
             }
 
         }
-        console.log(sum1 + '\n' + sum5 + '\n' + sum10);
+        console.log(sum1);
+        console.log(sum5);
+        console.log(sum10);
     </script>
     <script id="ch0105/12" type="cc">
         var n = +prompt('inter n:');
@@ -528,7 +532,7 @@
         if (b / a - x2 / x1 > 0.05)
             console.log('better')
         else if (x2 / x1 - b / a> 0.05)
-            console.log('better')
+            console.log('worse')
         else
             console.log('same')
         }
@@ -561,7 +565,7 @@
                 sum += 2 * height(i, H);
             return sum;
         }
-        console.log(Sum(10, H),height(10, H));
+        console.log(Sum(10, H).toFixed(4),height(10, H).toFixed(7));
     </script>
     <script id="ch0105/21" type="cc">
         var n = +prompt('inter n:');
@@ -575,7 +579,7 @@
                 n = n / 2;
             }
         }
-        console.log('end');
+        console.log('End');
     </script>
     <script id="ch0105/22" type="cc">
         var a = 0;
@@ -659,7 +663,7 @@
     </script>
     <script id="ch0105/28" type="cc">
         var n = +prompt('inter n:');
-        var k = '';
+        var k = 0;
         while (n >= 1) {
             k = k + n % 10 + ' ';
             n = Math.floor(n / 10);
@@ -733,7 +737,6 @@
                 sum = sum + ',' + l;
         }
         console.log(sum);
-        console.log(list);
     </script>
     <script id="ch0105/32" type="cc">
         var n = +prompt('inter n:');
@@ -799,11 +802,11 @@
         var X = +prompt('inter X');
 
         for (; X > 0; X--) {
-            N += Math.floor(M / N)
+            N += Math.floor(M / N);
         }
         console.log(N);
     </script>
-    <script id="ch0105/38" type="cc">
+    <script id="ch0105/38">
         var n = +prompt('inter n:');
         var a = '';
         var temp;
@@ -815,7 +818,10 @@
             }
             if (i == 0)
                 continue;
-            a += temp * i + ' ';
+            if (i === 1)
+                a += temp * i;
+            else
+                a += temp * i + ' ';
         }
         console.log(a);
     </script>
