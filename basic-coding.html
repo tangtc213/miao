@@ -1019,7 +1019,7 @@
     </script>
     <script id="narcissistics" type="dd">
         var list = [];
-        for( i = 1; i < 1000; i++) {
+        for( i = 2; i < 1000; i++) {
             var sum = 0;
             var temp = i;
             while (temp >= 1) {
@@ -1087,6 +1087,8 @@
         var n = +prompt('inter a number:');
         function isPrime(x) {
             flag = 1;
+            if (x == 1);
+            flag = 0;
             for (var i = 2; i < x; i++) {
                 if (x % i === 0)
                     flag = 0;
