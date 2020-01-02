@@ -207,7 +207,7 @@
         else
             console.log('NO');
     </script>
-    <script id="ch0104/09">
+    <script id="ch0104/09" type="bb">
         var num = +prompt('inter a number:');
         if (num % 3 ===0 && num % 5 === 0 && num % 7 === 0)
             console.log('3 5 7');
@@ -228,7 +228,7 @@
                 console.log('7');
         }
         else
-            console('n');
+            console.log('n');
     </script>
     <script id="ch0104/10" type="bb">
         var a = +prompt("inter a number:");
@@ -670,12 +670,14 @@
     </script>
     <script id="ch0105/28" type="cc">
         var n = +prompt('inter n:');
-        var k = 0;
+        var k;
+        var list = [];
         while (n >= 1) {
-            k = k + n % 10 + ' ';
+            k = n % 10;
             n = Math.floor(n / 10);
+            list.push(k);
         }
-        console.log(k);
+        console.log(list.join(" "));
     </script>
     <script id="ch0105/29" type="cc">
         var x = +prompt('inter x:');
@@ -815,18 +817,17 @@
     </script>
     <script id="ch0105/38" type="cc">
         var n = +prompt('inter n:');
-        var a = '';
+        var a = [];
         var temp;
         for(var i = n; i >= 0; i--) {
             temp = +prompt('inter a');
-            if (i == 0)
-                continue;
-            a += temp * i + ' ';
-            if (i === n && temp === 0) {
-                a = 0;
-            }
+            if (i != 0)
+                a.push(n * i);
         }
-        console.log(a);
+        if (n === 0)
+            console.log(0);
+        else
+            console.log(a.join(" "));
     </script>
     <script id="ch0105/39" type="cc">
         var n = +prompt('inter num:');
