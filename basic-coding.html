@@ -968,5 +968,212 @@
         }
         console.log(sum);
     </script>
+    <script id="7" type="dd">
+        var n = +prompt('inter num:');
+        function isRel7(x) {
+            var size = 1;
+            if (x % 7 == 0)
+                size = 0;
+            while (x >= 1) {
+                if (x % 10 == 7)
+                    size = 0;
+                x = Math.floor(x / 10);
+            }
+            return size;
+        }
+        if (isRel7(n))
+            console.log("NO");
+        else
+            console.log("YES");
+    </script>
+    <script id="sort" type="dd">
+        var list = [];
+        for (var i = 0; i < 3;i++) {
+            list.push(+prompt('inter a num:'));
+        }
+        var n = list.length;
+        for (var done = false; done = !done; n--) {
+            for (var i = 0; i < list.length; i++) {
+                if (list[i] > list[i + 1]) {
+                    var temp = list[i];
+                    list[i] = list[i + 1];
+                    list[i + 1] = temp;
+                    done = false;
+                }
+            }
+        }
+        console.log(list.join(" "));
+    </script>
+    <script id="narcissistic" type="dd">
+        var n = +prompt('inter a number');
+        var sum = 0;
+        var temp = n;
+        while (temp >= 1) {
+            sum += Math.pow(temp % 10, 3);
+            temp = Math.floor(temp / 10);
+        }
+        if (sum == n)
+            console.log('YES');
+        else
+            console.log('NO');
+    </script>
+    <script id="narcissistics" type="dd">
+        var list = [];
+        for( i = 1; i < 1000; i++) {
+            var sum = 0;
+            var temp = i;
+            while (temp >= 1) {
+                sum += Math.pow(temp % 10, 3);
+                temp = Math.floor(temp / 10);
+            }
+            if (sum == i)
+                list.push(i);
+        }
+        console.log(list.join(" "));
+    </script>
+    <script id="palindrom" type="dd">
+        var n = +prompt('inter a number');
+        list = [];
+        var temp = n;
+        size = 1;
+        while (temp >= 1) {
+            list.push(temp % 10);
+            temp = Math.floor(temp / 10);
+        }
+        for (var i = 0; i < list.length; i++) {
+            if (list[i] != list[list.length - i - 1])
+            size = 0;
+        }
+        if (size)
+            console.log('YES');
+        else
+            console.log('NO');
+
+    </script>
+    <script id="weekday" type="dd">
+        var year = prompt('inter a year:');
+        var month = prompt('inter a month');
+        var today = new Date(month + ' 1 , ' + year + ' 20:00:00');
+        var day1 = today.getDay();
+        console.log(day1);
+    </script>
+    <script id="complete-number" type="dd">
+        var perfect = +prompt('inter a number:');
+        var sum = 0;
+        for (var i = 1; i < perfect; i++) {
+            if (perfect % i === 0)
+                sum += i;
+        }
+        if (sum === perfect)
+            console.log('YES');
+        else
+            console.log('NO');
+    </script>
+    <script id="complete-numbers" type="dd">
+
+        var list = [];
+        for (var i = 2; i <= 1000; i++) {
+            var sum = 0;
+            for (var j = 1; j < i; j++) {
+                if (i % j === 0)
+                    sum += j;
+            }
+            if (sum === i)
+            list.push(i);
+        }
+        console.log(list.join(" "));
+    </script>
+    <script id="prime" type="dd">
+        var n = +prompt('inter a number:');
+        function isPrime(x) {
+            flag = 1;
+            for (var i = 2; i < x; i++) {
+                if (x % i === 0)
+                    flag = 0;
+            }
+            return flag;
+        }
+        if (isPrime(n))
+            console.log('YES');
+        else
+            console.log('NO');
+    </script>
+    <script id="primes" type="dd">
+        var list = [];
+
+        function isPrime(x) {
+            flag = 1;
+            for (var i = 2; i < x; i++) {
+                if (x % i === 0)
+                    flag = 0;
+            }
+            return flag;
+        }
+        for (i = 2; i <= 100; i++) {
+            if (isPrime(i))
+            list.push(i);
+        }
+        console.log(list.join(" "));
+    </script>
+    <script id="itob" type="dd">
+        n = +prompt('inter a number');
+        console.log(n.toString());
+    </script>
+    <script id="lcf&lcm" type="dd">
+        var m = +prompt('inter m');
+        var n = +prompt('inter n');
+        var lcf, lcm;
+        mlfl = [];
+        nlfl = [];
+        function factor(x) {
+            var list = [];
+            for (var i = 1; i < x; i++) {
+                if (x % i === 0)
+                    list.push(i);
+            }
+            return(list);
+        }
+        function getLcf(x, y) {
+            var max = 1;
+            var temp;
+            mlfl = factor(x);
+            nlfl = factor(y);
+            for (var j = 0; j < mlfl.length; j++) {
+                for (var k = 0; k < nlfl.length; k++) {
+                    if (nlfl[k] === mlfl[j])
+                        temp = nlfl[k];
+                }
+                if(max < temp)
+                    max = temp;
+            }
+            return max;
+        }
+        function getLcm(x, y) {
+            var temp;
+            var i = 0;
+            var min = 0;
+            while(++i) {
+                temp = x * i;
+                if(temp % y === 0) {
+                    min = temp;
+                    break;
+                }
+            }
+            return min;
+        }
+        console.log(getLcf(m, n));
+        console.log(getLcm(m, n));
+    </script>
+    <script id="sqrt">
+        var n = +prompt('inter a number');
+        var largen = 1000000 * n;
+        var m;
+        for (var i = 1; i <= largen; i++) {
+            if((i * i - largen <= 0) && ((i + 1) * (i + 1) -largen >=0))
+                m = i;
+        }
+        console.log(m / 1000);
+
+    </script>
 </body>
 </html>
