@@ -27,7 +27,8 @@
     <script id="ch0103/04" type="aa">
         var a = prompt("enter a:", '');
         var b = prompt('enter b:', '');
-        var c = a / b console.log(c.toFixed(3), a % b);
+        var c = a / b;
+        console.log(c.toFixed(3), a % b);
     </script>
     <script id="ch0103/05" type="aa">
         var a = prompt("enter a:", '');
@@ -165,7 +166,7 @@
     <script id="ch0104/04" type="bb">
         var inter = prompt('inter a character:');
         var num = inter.charCodeAt();
-        if (num % 2) {
+        if (num % 2 == 0) {
             console.log('NO');
         }
         else
@@ -242,7 +243,7 @@
     <script id="ch0104/12" type="bb">
         var S = +prompt('inter a mile')
         if (S == 100)
-            conssole.log('All');
+            console.log('All');
         else if (s > 100)
             console.log('Bike');
         else
@@ -343,9 +344,9 @@
             console.log('x1 = x2 = ' + x1.toFixed(5));
         }
         else if(delta > 0)
-            console.log('x1 = ' + x1.toFixed(5) + ';x2 = ' + x2.toFixed(5))
+            console.log('x1=' + x1.toFixed(5) + ';x2=' + x2.toFixed(5))
         else
-            console.log('x1 = ' + xr.toFixed(5) + '+' + xi.toFixed(5) + 'i' + ';x2 = ' + xr.toFixed(5) + '-' + xi.toFixed(5) + 'i');
+            console.log('x1=' + xr.toFixed(5) + '+' + xi.toFixed(5) + 'i' + ';x2=' + xr.toFixed(5) + '-' + xi.toFixed(5) + 'i');
     </script>
     <script id="ch0104/21" type="bb">
         var n = +prompt('inter n:');
@@ -571,7 +572,7 @@
         var n = +prompt('inter n:');
         while (n > 1) {
             if (n % 2 == 1) {
-                console.log(n + '*3+1 =' + Number(3 * n + 1))
+                console.log(n + '*3+1=' + Number(3 * n + 1))
                 n = 3 * n + 1;
             }
             else {
@@ -812,16 +813,15 @@
         var temp;
         for(var i = n; i >= 0; i--) {
             temp = +prompt('inter a');
-            if (i === n && temp === 0) {
-                a = 0;
-                break;
-            }
             if (i == 0)
                 continue;
             if (i === 1)
                 a += temp * i;
             else
                 a += temp * i + ' ';
+            if (i === n && temp === 0) {
+                a = 0;
+            }
         }
         console.log(a);
     </script>
