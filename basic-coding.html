@@ -815,15 +815,18 @@
         }
         console.log(N);
     </script>
-    <script id="ch0105/38" type="cc">
+    <script id="ch0105/38">
         var m = +prompt('inter m')
-        var a = [];
         var temp;
         while(m--) {
+            var a = [];
             var n = +prompt('inter n:');
             for(var i = n; i >= 0; i--) {
                 temp = +prompt('inter a');
-                a.push(temp * i);
+                if(n == 0)
+                    a.push(0);
+                if (i != 0)
+                    a.push(temp * i);
             }
                 console.log(a.join(" "));
         }
@@ -892,7 +895,7 @@
             if (x == 1 || x == k) {
                 return mk;
             } else if(a == 0) {
-                return ' ';
+                return '  ';
             } else
                 return mk;
         }
@@ -1169,7 +1172,7 @@
         var n = +prompt('inter a number')
         var lo = 1
         var hi = n
-        while (hi - lo >= 0.01) {
+        while (hi - lo >= 0.000001) {
         var mid = (lo + hi) / 2
             if(mid * mid === n) {
                 break
