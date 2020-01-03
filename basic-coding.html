@@ -816,18 +816,17 @@
         console.log(N);
     </script>
     <script id="ch0105/38" type="cc">
-        var n = +prompt('inter n:');
+        var m = +prompt('inter m')
         var a = [];
         var temp;
-        for(var i = n; i >= 0; i--) {
-            temp = +prompt('inter a');
-            if (i != 0)
+        while(m--) {
+            var n = +prompt('inter n:');
+            for(var i = n; i >= 0; i--) {
+                temp = +prompt('inter a');
                 a.push(temp * i);
+            }
+                console.log(a.join(" "));
         }
-        if (n === 0)
-            console.log(0);
-        else
-            console.log(a.join(" "));
     </script>
     <script id="ch0105/39" type="cc">
         var n = +prompt('inter num:');
@@ -897,8 +896,8 @@
             } else
                 return mk;
         }
+        var list = '';
         for(var i = m; i > 0; i--) {
-            var list = '';
             if(i === m || i === 1) {
                 for (var j = n; j > 0; j--)
                     list += mark;
@@ -907,8 +906,9 @@
                     list += getmark(j, n, size, mark);
                 }
             }
-            console.log(list);
+            list += '\n';
         }
+        console.log(list)
     </script>
     <script id="ch0105/43" type="cc">
         var n = +prompt('inter n:');
@@ -1166,8 +1166,21 @@
         console.log(getLcf(m, n), getLcm(m, n));
     </script>
     <script id="sqrt" type="dd">
-        var n = +prompt('inter a number');
-        console.log(Math.sqrt(n).toFixed(3));
+        var n = +prompt('inter a number')
+        var lo = 1
+        var hi = n
+        while (hi - lo >= 0.01) {
+        var mid = (lo + hi) / 2
+            if(mid * mid === n) {
+                break
+            } else if (mid * mid < n)
+                lo = mid
+            else
+                hi = mid
+        }
+        console.log(mid.toFixed(3))
+
+
     </script>
 </body>
 </html>
