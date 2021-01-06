@@ -734,44 +734,172 @@ var tangtc213 = {
         return paths.map(object[eval(paths)])
     },
 
+    // 分配来源对象的可枚举属性到目标对象所有解析为 undefined 的属性上
+    defaults : function(object){
+        if(arguments.length = 1) {
+            return object
+        }
+        for(let i = 1; i < arguments.length; i++ ) {
+            for(let idx in arguments[i]) {
+                if(object[idx] === undefined) {
+                    object[idx] = arguments[i][idx]
+                }
+            }
+        }
+        return object
+    },
 
-    defaults : function(){},
-    get : function(){},
-    set : function(){},
-    has : function(){},
+    // 根据 object对象的path路径获取值。 如果解析 value 是 undefined 会以 defaultValue 取代
+    get : function(object, path, defaultvalue){
+        return object[eval(path)] !== undefined ? object[eval(path)] : defaultvalue
+    },
+
+    //设置 object对象中对应 path 属性路径上的值，如果path不存在，则创建
+    set : function(object, path, value){
+        return object[eval(path)] = value
+    },
+
+    // 检查 path 是否是object对象的直接属性。
+    has : function(object, path){
+        if(Array.isArray(path)) {
+            path = path.join('.')
+        }
+        if(object.eval(path)) {
+            return true
+        } else {
+            return false
+        }
+    },
+
+    //
     hasIn : function(){},
-    invert : function(){},
-    keys : function(){},
-    assign : function(){},
-    omit : function(){},
-    pick : function(){},
-    values : function(){},
-    camelCase : function(){},
-    capitalize : function(){},
-    deburr : function(){},
-    endsWith : function(){},
-    escape : function(){},
-    kebabCase : function(){},
-    lowerCase : function(){},
-    lowerFirst : function(){},
-    pad : function(){},
-    padEnd : function(){},
-    padStart : function(){},
-    parseInt : function(){},
-    repeat : function(){},
-    replace : function(){},
-    snakeCase : function(){},
-    split : function(){},
-    startCase : function(){},
-    startsWith : function(){},
-    trim : function(){},
-    trimEnd : function(){},
-    trimStart : function(){},
-    truncate : function(){},
-    unescape : function(){},
-    upperCase : function(){},
-    upperFirst : function(){},
-    words : function(){},
+
+    // 创建一个object键值倒置后的对象。 如果 object 有重复的值，后面的值会覆盖前面的值
+    invert : function(object){
+        let ary = Object.entries(object)
+        let result = {}
+        ary.forEach(item => {
+            result[item[1]] = item[0]
+        })
+        return result
+    },
+
+    // 创建一个 object 的自身可枚举属性名为数组
+    keys : function(object){
+        let result = []
+        for( idx in object) {
+            result.push(idx)
+        }
+        return result
+    },
+
+    // 分配来源对象的可枚举属性到目标对象上。 来源对象的应用规则是从左到右，随后的下一个对象的属性会覆盖上一个对象的属性。
+    assign : function(object){
+        if(arguments.length = 1) {
+            return object
+        }
+        for(let i = 1; i < arguments.length; i++ ) {
+            for(let idx in arguments[i]) {
+                object[idx] = arguments[i][idx]
+            }
+        }
+        return object
+    },
+
+    //忽略属性之外的object自身和继承的可枚举属性组成
+    omit : function(object, ary){
+        let result = {}
+        for(idx in object) {
+            if(!ary.includes(idx)) {
+                result[idx] = object[idx]
+            }
+        }
+        return result
+    },
+
+    // 创建一个从 object 中选中的属性的对象。
+    pick : function(object, ary){
+        let result = {}
+        for(idx in object) {
+            if(ary.includes(idx)) {
+                result[idx] = object[idx]
+            }
+        }
+        return result
+    },
+    // 创建 object 自身可枚举属性的值为数组
+    values : function(object){
+        let result = []
+        for(let item of object) {
+            result.push(item)
+        }
+        return result
+    },
+    // 转换字符串string首字母为大写，剩下为小写
+    capitalize : function(string){
+        let result = string[0].toUpperCase() + string.slice(1)
+        return result
+    },
+    // 检查字符串string是否以给定的target字符串结尾。
+    endsWith : function(string, target, postion = string.length){
+        return string[postion - 1] === target
+    },
+    // 转换字符串string的首字母为小写
+    lowerFirst : function(string){
+        let result = string[0].toLowerCase() + string.slice(1)
+        return result
+    },
+    // 如果string字符串长度小于 length 则从左侧和右侧填充字符。 如果没法平均分配，则截断超出的长度。
+    pad : function(string ,length = 0, char =' '){
+        function getStr(char, len) {
+            let str = ''
+            for(let i = 0; i < len ; i++) {
+                str += char[i % char.length]
+            }
+            return str
+        }
+        let leftLen = length >>> 1
+        let rightLen = length - leftLen
+        return getStr(char, leftLen) + string + getStr(char, rightLen)
+    },
+
+    // 如果string字符串长度小于 length 则在右侧填充字符。 如果超出length长度则截断超出的部分。
+    padEnd : function(string ,length = 0, char =' '){
+        function getStr(char, len) {
+            let str = ''
+            for(let i = 0; i < len ; i++) {
+                str += char[i % char.length]
+            }
+            return str
+        }
+        return string + getStr(char, length)
+    },
+
+    // 如果string字符串长度小于 length 则在左侧填充字符。 如果超出length长度则截断超出的部分
+    padStart : function(string ,length = 0, char =' '){
+        function getStr(char, len) {
+            let str = ''
+            for(let i = 0; i < len ; i++) {
+                str += char[i % char.length]
+            }
+            return str
+        }
+        return getStr(char, length) + string
+    },
+
+    //重复 N 次给定字符串。
+    repeat : function(string ='', n = 1){
+        let result =''
+        while(n--) {
+            result += string
+        }
+        return result
+    },
+    // 检查字符串string是否以 target 开头。
+    startsWith : function(string, target, position = 0){
+        return string[position] === target
+    },
+
     range : function(){},
 }
 
